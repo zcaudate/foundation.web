@@ -1,0 +1,20 @@
+{
+  "expo" : {
+    "assetBundlePatterns" : [ "**/*" ],
+    "updates" : {
+      "fallbackToCacheTimeout" : 0
+    },
+    "name" : "Web Index",
+    "slug" : "web index",
+    "entryPoint" : "./src/App.js",
+    "splash" : {
+      "resizeMode" : "contain",
+      "backgroundColor" : "#ffffff"
+    },
+    "version" : "1.0.0",
+    "ios" : {
+      "supportsTablet" : true
+    },
+    "orientation" : "portrait"
+  }
+}
