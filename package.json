@@ -3,30 +3,31 @@
   "name" : "component-native",
   "private" : true,
   "homepage" : "/foundation.web",
-  "scripts" : {
-    "start" : "expo start",
-    "android" : "expo start --android",
-    "ios" : "expo start --ios",
-    "web" : "expo start --web",
-    "eject" : "expo eject"
-  },
   "dependencies" : {
     "react-native-svg" : "12.3.0",
     "javascript-time-ago" : "2.3.11",
     "react-native" : "0.68.1",
+    "fuse.js" : "6.4.6",
     "expo-media-library" : "14.1.0",
     "expo-web-browser" : "10.2.1",
+    "ethers" : "5.7.1",
+    "react-color" : "2.19.3",
     "uuid" : "8.3.2",
     "react-dom" : "17.0.2",
+    "@metamask/detect-provider" : "1.2.0",
     "lightweight-charts" : "3.8.0",
+    "expo-auth-session" : "3.6.1",
     "dateformat" : "^4",
     "react-native-vector-icons" : "9.1.0",
+    "expo-image-picker" : "13.1.1",
     "react-native-web" : "0.17.7",
     "react-native-error-boundary" : "1.1.10",
     "base-64" : "1.0.0",
     "react-native-base64" : "0.1.0",
     "react" : "17.0.2",
+    "@metamask/onboarding" : "1.0.1",
     "react-native-get-random-values" : "1.8.0",
+    "mustache" : "4.2.0",
     "expo-random" : "12.2.0"
   },
   "devDependencies" : {
@@ -37,6 +38,13 @@
     "expo" : "45.0.3",
     "expo-cli" : "6.0.8",
     "typescript" : "4.3.5"
+  },
+  "scripts" : {
+    "start" : "expo start",
+    "android" : "expo start --android",
+    "ios" : "expo start --ios",
+    "web" : "expo start --web",
+    "eject" : "expo eject"
   },
   "metro" : {
     "watchFolders" : [ "assets" ]
