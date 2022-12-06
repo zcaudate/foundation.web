@@ -15,7 +15,11 @@ import validators from './base-validators'
 // melbourne.slim-common-test/FormEnclosedDemo [23] 
 function FormEnclosedDemo(){
   return (
-    <n.Enclosed label="melbourne.slim-common/FormEnclosed">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-common/FormEnclosed"
+      code={function (){
+        return "(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"flex\":1,\"padding\":8}}>\n      <slim_common.FormEnclosed\n        designNeutral=\"#333\"\n        label=\"HELLO\"\n        styleLabel={{}}\n        minWidth={150}>\n        <ReactNative.View style={{\"paddingTop\":10}}><ReactNative.Text>WORLD</ReactNative.Text></ReactNative.View>\n      </slim_common.FormEnclosed>\n    </ReactNative.View>\n    <ReactNative.View style={{\"backgroundColor\":\"#333\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormEnclosed\n        designNeutral=\"#eee\"\n        label=\"HELLO\"\n        styleLabel={{}}\n        minWidth={150}>\n        <ReactNative.View style={{\"paddingTop\":10}}><ReactNative.Text>WORLD</ReactNative.Text></ReactNative.View>\n      </slim_common.FormEnclosed>\n    </ReactNative.View>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ReactNative.View style={{"backgroundColor":"#eee","flex":1,"padding":8}}>
           <slim_common.FormEnclosed
@@ -36,14 +40,18 @@ function FormEnclosedDemo(){
           </slim_common.FormEnclosed>
         </ReactNative.View>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-common-test/FormReadOnlyDemo [60] 
 function FormReadOnlyDemo(){
   let entry = {"name":"abc"};
   return (
-    <n.Enclosed label="melbourne.slim-common/FormReadOnly">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-common/FormReadOnly"
+      code={function (){
+        return "(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormReadOnly\n        design={{\"type\":\"light\"}}\n        label=\"Name\"\n        entry={entry}\n        fieldProps={{\"outlined\":true}}\n        template={[\"name\"]}>\n      </slim_common.FormReadOnly>\n    </ReactNative.View>\n    <ReactNative.View style={{\"backgroundColor\":\"#333\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormReadOnly\n        design={{\"type\":\"dark\"}}\n        label=\"Name\"\n        entry={entry}\n        fieldProps={{\"outlined\":true}}\n        template={[\"name\"]}>\n      </slim_common.FormReadOnly>\n    </ReactNative.View>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ReactNative.View style={{"backgroundColor":"#eee","flex":1,"padding":10}}>
           <slim_common.FormReadOnly
@@ -64,10 +72,10 @@ function FormReadOnlyDemo(){
           </slim_common.FormReadOnly>
         </ReactNative.View>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
-// melbourne.slim-common-test/FormInputDemo [93] 
+// melbourne.slim-common-test/FormInputDemo [92] 
 function FormInputDemo(){
   let form = ext_form.makeForm(function (){
     return {"name":"abc"};
@@ -76,7 +84,26 @@ function FormInputDemo(){
     event_form.validate_all(form);
   },[]);
   return (
-    <n.Enclosed label="melbourne.slim-common/FormInput">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-common/FormInput"
+      code={function (){
+        return "(\n  <n.Row>\n    <ReactNative.Button\n      title=\"V\"\n      onPress={function (){\n        return event_form.validate_field(form,\"name\");\n      }}>\n    </ReactNative.Button>\n    <ReactNative.Text> </ReactNative.Text>\n    <ReactNative.Button\n      title=\"P\"\n      onPress={function (){\n        return console.log(form);\n      }}>\n    </ReactNative.Button>\n  </n.Row>);\n(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormInput\n        design={{\"type\":\"light\"}}\n        label=\"Name\"\n        form={form}\n        fieldProps={{\"outlined\":true}}\n        field=\"name\">\n      </slim_common.FormInput>\n    </ReactNative.View>\n    <ReactNative.View style={{\"backgroundColor\":\"#333\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormInput\n        design={{\"type\":\"dark\"}}\n        label=\"Name\"\n        form={form}\n        fieldProps={{\"outlined\":true}}\n        field=\"name\"\n        hideValidation={true}>\n      </slim_common.FormInput>\n    </ReactNative.View>\n  </n.Row>);";
+      }()}>
+      <n.Row>
+        <ReactNative.Button
+          title="V"
+          onPress={function (){
+            return event_form.validate_field(form,"name");
+          }}>
+        </ReactNative.Button>
+        <ReactNative.Text> </ReactNative.Text>
+        <ReactNative.Button
+          title="P"
+          onPress={function (){
+            return console.log(form);
+          }}>
+        </ReactNative.Button>
+      </n.Row>
       <n.Row>
         <ReactNative.View style={{"backgroundColor":"#eee","flex":1,"padding":10}}>
           <slim_common.FormInput
@@ -98,10 +125,10 @@ function FormInputDemo(){
           </slim_common.FormInput>
         </ReactNative.View>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
-// melbourne.slim-common-test/FormInputXLDemo [138] 
+// melbourne.slim-common-test/FormInputXLDemo [137] 
 function FormInputXLDemo(){
   let form = ext_form.makeForm(function (){
     return {"name":"abc"};
@@ -110,7 +137,11 @@ function FormInputXLDemo(){
     event_form.validate_all(form);
   },[]);
   return (
-    <n.Enclosed label="melbourne.slim-common/FormInputXL">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-common/FormInputXL"
+      code={function (){
+        return "(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormInputXL\n        design={{\"type\":\"light\"}}\n        label=\"Name\"\n        form={form}\n        fieldProps={{\"outlined\":true}}\n        field=\"name\">\n      </slim_common.FormInputXL>\n    </ReactNative.View>\n    <ReactNative.View style={{\"backgroundColor\":\"#333\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormInputXL\n        design={{\"type\":\"dark\"}}\n        label=\"Name\"\n        form={form}\n        fieldProps={{\"outlined\":true}}\n        field=\"name\"\n        hideValidation={true}>\n      </slim_common.FormInputXL>\n    </ReactNative.View>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ReactNative.View style={{"backgroundColor":"#eee","flex":1,"padding":10}}>
           <slim_common.FormInputXL
@@ -132,10 +163,10 @@ function FormInputXLDemo(){
           </slim_common.FormInputXL>
         </ReactNative.View>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
-// melbourne.slim-common-test/FormTextAreaDemo [175] 
+// melbourne.slim-common-test/FormTextAreaDemo [174] 
 function FormTextAreaDemo(){
   let form = ext_form.makeForm(function (){
     return {"name":"abc"};
@@ -144,7 +175,11 @@ function FormTextAreaDemo(){
     event_form.validate_all(form);
   },[]);
   return (
-    <n.Enclosed label="melbourne.slim-common/FormTextArea">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-common/FormTextArea"
+      code={function (){
+        return "(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormTextArea\n        design={{\"type\":\"light\"}}\n        label=\"Name\"\n        form={form}\n        fieldProps={{\"outlined\":true}}\n        field=\"name\">\n      </slim_common.FormTextArea>\n    </ReactNative.View>\n    <ReactNative.View style={{\"backgroundColor\":\"#333\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormTextArea\n        design={{\"type\":\"dark\"}}\n        label=\"Name\"\n        form={form}\n        fieldProps={{\"outlined\":true}}\n        field=\"name\">\n      </slim_common.FormTextArea>\n    </ReactNative.View>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ReactNative.View style={{"backgroundColor":"#eee","flex":1,"padding":10}}>
           <slim_common.FormTextArea
@@ -165,16 +200,20 @@ function FormTextAreaDemo(){
           </slim_common.FormTextArea>
         </ReactNative.View>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
-// melbourne.slim-common-test/FormCheckBoxDemo [211] 
+// melbourne.slim-common-test/FormCheckBoxDemo [210] 
 function FormCheckBoxDemo(){
   let form = ext_form.makeForm(function (){
     return {"agree":false};
   },{"agree":[]});
   return (
-    <n.Enclosed label="melbourne.slim-common/FormCheckBox">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-common/FormCheckBox"
+      code={function (){
+        return "(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormCheckBox\n        design={{\"type\":\"light\"}}\n        label=\"I AGREE TO TERMS AND CONDITIONS\"\n        form={form}\n        field=\"agree\">\n      </slim_common.FormCheckBox>\n    </ReactNative.View>\n    <ReactNative.View style={{\"backgroundColor\":\"#333\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormCheckBox\n        design={{\"type\":\"dark\"}}\n        label=\"I AGREE TO TERMS AND CONDITIONS\"\n        form={form}\n        field=\"agree\">\n      </slim_common.FormCheckBox>\n    </ReactNative.View>\n  </n.Row>);\n(\n  <ReactNative.Text>{n.format_obj(form.data)}</ReactNative.Text>);";
+      }()}>
       <n.Row>
         <ReactNative.View style={{"backgroundColor":"#eee","flex":1,"padding":10}}>
           <slim_common.FormCheckBox
@@ -193,16 +232,21 @@ function FormCheckBoxDemo(){
           </slim_common.FormCheckBox>
         </ReactNative.View>
       </n.Row>
-    </n.Enclosed>);
+      <ReactNative.Text>{n.format_obj(form.data)}</ReactNative.Text>
+    </n.EnclosedCodeContainer>);
 }
 
-// melbourne.slim-common-test/FormToggleButtonDemo [245] 
+// melbourne.slim-common-test/FormToggleButtonDemo [244] 
 function FormToggleButtonDemo(){
   let form = ext_form.makeForm(function (){
     return {"agree":false};
   },{"agree":[]});
   return (
-    <n.Enclosed label="melbourne.slim-common/FormToggleButton">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-common/FormToggleButton"
+      code={function (){
+        return "(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormToggleButton\n        design={{\"type\":\"light\"}}\n        label=\"Agree\"\n        form={form}\n        field=\"agree\"\n        text=\"I AGREE TO TERMS AND CONDITIONS\">\n      </slim_common.FormToggleButton>\n    </ReactNative.View>\n    <ReactNative.View style={{\"backgroundColor\":\"#333\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormToggleButton\n        design={{\"type\":\"dark\"}}\n        label=\"Agree\"\n        form={form}\n        field=\"agree\"\n        text=\"I AGREE TO TERMS AND CONDITIONS\">\n      </slim_common.FormToggleButton>\n    </ReactNative.View>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ReactNative.View style={{"backgroundColor":"#eee","flex":1,"padding":10}}>
           <slim_common.FormToggleButton
@@ -223,16 +267,20 @@ function FormToggleButtonDemo(){
           </slim_common.FormToggleButton>
         </ReactNative.View>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
-// melbourne.slim-common-test/FormToggleSwitchDemo [281] 
+// melbourne.slim-common-test/FormToggleSwitchDemo [278] 
 function FormToggleSwitchDemo(){
   let form = ext_form.makeForm(function (){
     return {"agree":false};
   },{"agree":[]});
   return (
-    <n.Enclosed label="melbourne.slim-common/FormToggleSwitch">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-common/FormToggleSwitch"
+      code={function (){
+        return "(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormToggleSwitch\n        design={{\"type\":\"light\"}}\n        label=\"Agree\"\n        form={form}\n        field=\"agree\">\n      </slim_common.FormToggleSwitch>\n    </ReactNative.View>\n    <ReactNative.View style={{\"backgroundColor\":\"#333\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormToggleSwitch\n        design={{\"type\":\"dark\"}}\n        label=\"Agree\"\n        form={form}\n        field=\"agree\">\n      </slim_common.FormToggleSwitch>\n    </ReactNative.View>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ReactNative.View style={{"backgroundColor":"#eee","flex":1,"padding":10}}>
           <slim_common.FormToggleSwitch
@@ -251,16 +299,20 @@ function FormToggleSwitchDemo(){
           </slim_common.FormToggleSwitch>
         </ReactNative.View>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
-// melbourne.slim-common-test/FormEnumSingleDemo [315] 
+// melbourne.slim-common-test/FormEnumSingleDemo [310] 
 function FormEnumSingleDemo(){
   let form = ext_form.makeForm(function (){
     return {"currency":"XLM"};
   },{"currency":[]});
   return (
-    <n.Enclosed label="melbourne.slim-common/FormEnumSingle">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-common/FormEnumSingle"
+      code={function (){
+        return "(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormEnumSingle\n        design={{\"type\":\"light\"}}\n        label=\"Currency\"\n        form={form}\n        field=\"currency\"\n        options={[\"XLM\",\"USD\",\"STATS\"]}>\n      </slim_common.FormEnumSingle>\n    </ReactNative.View>\n    <ReactNative.View style={{\"backgroundColor\":\"#333\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormEnumSingle\n        design={{\"type\":\"dark\"}}\n        label=\"Currency\"\n        form={form}\n        field=\"currency\"\n        options={[\"XLM\",\"USD\",\"STATS\"]}>\n      </slim_common.FormEnumSingle>\n    </ReactNative.View>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ReactNative.View style={{"backgroundColor":"#eee","flex":1,"padding":10}}>
           <slim_common.FormEnumSingle
@@ -281,16 +333,20 @@ function FormEnumSingleDemo(){
           </slim_common.FormEnumSingle>
         </ReactNative.View>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
-// melbourne.slim-common-test/FormEnumMultiDemo [349] 
+// melbourne.slim-common-test/FormEnumMultiDemo [344] 
 function FormEnumMultiDemo(){
   let form = ext_form.makeForm(function (){
     return {"currency":["XLM","STATS"]};
   },{"currency":[]});
   return (
-    <n.Enclosed label="melbourne.slim-common/FormEnumMulti">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-common/FormEnumMulti"
+      code={function (){
+        return "(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormEnumMulti\n        design={{\"type\":\"light\"}}\n        label=\"Currency\"\n        form={form}\n        field=\"currency\"\n        options={[\"XLM\",\"USD\",\"STATS\"]}>\n      </slim_common.FormEnumMulti>\n    </ReactNative.View>\n    <ReactNative.View style={{\"backgroundColor\":\"#333\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormEnumMulti\n        design={{\"type\":\"dark\"}}\n        label=\"Currency\"\n        form={form}\n        field=\"currency\"\n        options={[\"XLM\",\"USD\",\"STATS\"]}>\n      </slim_common.FormEnumMulti>\n    </ReactNative.View>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ReactNative.View style={{"backgroundColor":"#eee","flex":1,"padding":10}}>
           <slim_common.FormEnumMulti
@@ -311,16 +367,20 @@ function FormEnumMultiDemo(){
           </slim_common.FormEnumMulti>
         </ReactNative.View>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
-// melbourne.slim-common-test/FormColorInputDemo [383] 
+// melbourne.slim-common-test/FormColorInputDemo [378] 
 function FormColorInputDemo(){
   let form = ext_form.makeForm(function (){
     return {"color":"#456789"};
   },{"color":[]});
   return (
-    <n.Enclosed label="melbourne.slim-common/FormColorInput">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-common/FormColorInput"
+      code={function (){
+        return "(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormColorInput\n        design={{\"type\":\"light\"}}\n        label=\"Color\"\n        form={form}\n        field=\"color\">\n      </slim_common.FormColorInput>\n    </ReactNative.View>\n    <ReactNative.View style={{\"backgroundColor\":\"#333\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormColorInput\n        design={{\"type\":\"dark\"}}\n        label=\"Color\"\n        form={form}\n        field=\"color\">\n      </slim_common.FormColorInput>\n    </ReactNative.View>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ReactNative.View style={{"backgroundColor":"#eee","flex":1,"padding":10}}>
           <slim_common.FormColorInput
@@ -339,16 +399,20 @@ function FormColorInputDemo(){
           </slim_common.FormColorInput>
         </ReactNative.View>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
-// melbourne.slim-common-test/FormChipInputDemo [415] 
+// melbourne.slim-common-test/FormChipInputDemo [410] 
 function FormChipInputDemo(){
   let form = ext_form.makeForm(function (){
     return {"tags":["football","sport"]};
   },{"tags":[]});
   return (
-    <n.Enclosed label="melbourne.slim-common/FormChipInput">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-common/FormChipInput"
+      code={function (){
+        return "(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormChipInput\n        design={{\"type\":\"light\"}}\n        label=\"Tags\"\n        form={form}\n        field=\"tags\">\n      </slim_common.FormChipInput>\n    </ReactNative.View>\n    <ReactNative.View style={{\"backgroundColor\":\"#333\",\"flex\":1,\"padding\":10}}>\n      <slim_common.FormChipInput design={{\"type\":\"dark\"}} label=\"Tags\" form={form} field=\"tags\"></slim_common.FormChipInput>\n    </ReactNative.View>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ReactNative.View style={{"backgroundColor":"#eee","flex":1,"padding":10}}>
           <slim_common.FormChipInput
@@ -362,10 +426,10 @@ function FormChipInputDemo(){
           <slim_common.FormChipInput design={{"type":"dark"}} label="Tags" form={form} field="tags"></slim_common.FormChipInput>
         </ReactNative.View>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
-// melbourne.slim-common-test/FormLayoutDemo [447] 
+// melbourne.slim-common-test/FormLayoutDemo [442] 
 function FormLayoutDemo(){
   let form = ext_form.makeForm(function (){
     return {
@@ -376,7 +440,11 @@ function FormLayoutDemo(){
     };
   },{"currency":[],"currency1":[],"name":[],"about":[]});
   return (
-    <n.Enclosed label="melbourne.slim-common/FormLayout">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-common/FormLayout"
+      code={function (){
+        return "(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"padding\":20,\"flex\":1}}>\n      <slim_common.FormLayout\n        design={{\"type\":\"light\"}}\n        form={form}\n        rows={[\n          {\n          \"component\":slim_common.FormEnumMulti,\n          \"label\":\"Currency\",\n          \"field\":\"currency\",\n          \"options\":[\"XLM\",\"USD\",\"STATS\"]\n        },\n          {\n          \"component\":slim_common.FormEnumSingle,\n          \"label\":\"Currency1\",\n          \"field\":\"currency1\",\n          \"options\":[\"USD\",\"STATS\"]\n        },\n          {\n          \"component\":slim_common.FormInput,\n          \"label\":\"Name\",\n          \"field\":\"name\"\n        },\n          {\n          \"component\":slim_common.FormTextArea,\n          \"label\":\"About\",\n          \"field\":\"about\"\n        }\n        ]}>\n      </slim_common.FormLayout>\n    </ReactNative.View>\n    <ReactNative.View style={{\"backgroundColor\":\"#333\",\"padding\":20,\"flex\":1}}>\n      <slim_common.FormLayout\n        design={{\"type\":\"dark\"}}\n        form={form}\n        rows={[\n          {\n          \"component\":slim_common.FormEnumMulti,\n          \"label\":\"Currency\",\n          \"field\":\"currency\",\n          \"options\":[\"XLM\",\"USD\",\"STATS\"]\n        },\n          {\n          \"component\":slim_common.FormEnumSingle,\n          \"label\":\"Currency1\",\n          \"field\":\"currency1\",\n          \"options\":[\"USD\",\"STATS\"]\n        },\n          {\n          \"component\":slim_common.FormInput,\n          \"label\":\"Name\",\n          \"field\":\"name\"\n        },\n          {\n          \"component\":slim_common.FormTextArea,\n          \"label\":\"About\",\n          \"field\":\"about\"\n        }\n        ]}>\n      </slim_common.FormLayout>\n    </ReactNative.View>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ReactNative.View style={{"backgroundColor":"#eee","padding":20,"flex":1}}>
           <slim_common.FormLayout
@@ -439,7 +507,7 @@ function FormLayoutDemo(){
           </slim_common.FormLayout>
         </ReactNative.View>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {

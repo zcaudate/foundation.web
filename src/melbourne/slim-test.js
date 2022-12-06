@@ -97,7 +97,11 @@ function TableDemo(){
   let [mini,setMini] = React.useState(true);
   let design = {"type":"light"};
   return (
-    <n.Enclosed label="melbourne.slim/Table">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim/Table"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_text.ToggleMinor\n      text=\"Create\"\n      selected={showCreate}\n      onPress={function (){\n        return setShowCreate(!showCreate);\n      }}\n      design={design}>\n    </ui_text.ToggleMinor>\n    <ui_text.ToggleMinor\n      text=\"List\"\n      selected={showList}\n      onPress={function (){\n        return setShowList(!showList);\n      }}\n      design={design}>\n    </ui_text.ToggleMinor>\n    <ui_text.ToggleMinor\n      text=\"Mini\"\n      selected={mini}\n      onPress={function (){\n        return setMini(!mini);\n      }}\n      design={design}>\n    </ui_text.ToggleMinor>\n  </n.Row>);\n(\n  <n.Row>\n    <slim.Table\n      design={{\"type\":\"light\"}}\n      display={{\"type\":\"fold\"}}\n      mini={mini}\n      views={views}\n      components={components}\n      control={control}>\n    </slim.Table>\n    <slim.Table\n      design={{\"type\":\"dark\"}}\n      display={{\"type\":\"fold\"}}\n      mini={mini}\n      views={views}\n      components={components}\n      control={control}>\n    </slim.Table>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_text.ToggleMinor
           text="Create"
@@ -142,13 +146,17 @@ function TableDemo(){
           control={control}>
         </slim.Table>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-test/CreateEntryDemo [131] 
 function CreateEntryDemo(){
   return (
-    <n.Enclosed label="melbourne.slim/createEntry">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim/createEntry"
+      code={function (){
+        return "(\n  <n.Row>\n    {slim.createEntry({\n      \"design\":{\"type\":\"light\"},\n      \"impl\":{\"type\":\"raw\"},\n      \"entry\":{\"a\":1,\"b\":2}\n    })}\n  </n.Row>);";
+      }()}>
       <n.Row>
         {slim.createEntry({
           "design":{"type":"light"},
@@ -156,20 +164,24 @@ function CreateEntryDemo(){
           "entry":{"a":1,"b":2}
         })}
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-test/EntryDemo [146] 
 function EntryDemo(){
   return (
-    <n.Enclosed label="melbourne.slim/entry">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim/entry"
+      code={function (){
+        return "(\n  <n.Row>\n    {slim.entry(\n      {\"design\":{\"type\":\"light\"},\"entry\":{\"a\":1,\"b\":2}},\n      {\"type\":\"raw\"}\n    )}\n  </n.Row>);";
+      }()}>
       <n.Row>
         {slim.entry(
           {"design":{"type":"light"},"entry":{"a":1,"b":2}},
           {"type":"raw"}
         )}
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-test/UseRouteControlDemo [170] 
@@ -178,7 +190,11 @@ function UseRouteControlDemo(){
   let {orderBy,routeKey,setOrderBy,setShowCreate,setShowDetail,setShowHeader,setShowList,setShowModify,showCreate,showDetail,showHeader,showList,showModify} = controls;
   let design = {"type":"light"};
   return (
-    <n.Enclosed label="melbourne.slim/UseRouteControl">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim/UseRouteControl"
+      code={function (){
+        return "(\n  <ui_static.Div style={{\"flexDirection\":\"row\"}} design={design}>\n    <ui_text.ToggleMinor\n      text=\"OrderBy\"\n      selected={orderBy}\n      onPress={function (){\n        return setOrderBy((orderBy == \"name\") ? \"time\" : \"name\");\n      }}\n      design={design}>\n    </ui_text.ToggleMinor>\n    <ui_text.ToggleMinor\n      text=\"Header\"\n      selected={showHeader}\n      onPress={function (){\n        return setShowHeader(!showHeader);\n      }}\n      design={design}>\n    </ui_text.ToggleMinor>\n    <ui_text.ToggleMinor\n      text=\"Detail\"\n      selected={showDetail}\n      onPress={function (){\n        return setShowDetail(!showDetail);\n      }}\n      design={design}>\n    </ui_text.ToggleMinor>\n    <ui_text.ToggleMinor\n      text=\"Modify\"\n      selected={showModify}\n      onPress={function (){\n        return setShowModify(!showModify);\n      }}\n      design={design}>\n    </ui_text.ToggleMinor>\n    <ui_text.ToggleMinor\n      text=\"Create\"\n      selected={showCreate}\n      onPress={function (){\n        return setShowCreate(!showCreate);\n      }}\n      design={design}>\n    </ui_text.ToggleMinor>\n    <ui_text.ToggleMinor\n      text=\"List\"\n      selected={showList}\n      onPress={function (){\n        return setShowList(!showList);\n      }}\n      design={design}>\n    </ui_text.ToggleMinor>\n  </ui_static.Div>);";
+      }()}>
       <ui_static.Div style={{"flexDirection":"row"}} design={design}>
         <ui_text.ToggleMinor
           text="OrderBy"
@@ -229,7 +245,7 @@ function UseRouteControlDemo(){
           design={design}>
         </ui_text.ToggleMinor>
       </ui_static.Div>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {

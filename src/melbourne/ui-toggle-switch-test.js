@@ -12,7 +12,11 @@ function ToggleSwitchDemo(){
   let [s1,setS1] = React.useState(true);
   let [s2,setS2] = React.useState(true);
   return (
-    <n.Enclosed label=" melbourne.ui-toggle-switch/ToggleSwitch">
+    <n.EnclosedCodeContainer
+      label=" melbourne.ui-toggle-switch/ToggleSwitch"
+      code={function (){
+        return "(\n  <n.Row>\n    <n.Row style={{\"backgroundColor\":\"#eee\",\"flex\":1,\"padding\":30}}>\n      <ui_toggle_switch.ToggleSwitch\n        design={{\"type\":\"light\"}}\n        selected={s1}\n        onPress={function (){\n          return setS1(!s1);\n        }}>\n      </ui_toggle_switch.ToggleSwitch>\n    </n.Row>\n    <n.Row style={{\"backgroundColor\":\"#333\",\"flex\":1,\"padding\":30}}>\n      <ui_toggle_switch.ToggleSwitch\n        design={{\"type\":\"dark\"}}\n        selected={s2}\n        onPress={function (){\n          return setS2(!s2);\n        }}>\n      </ui_toggle_switch.ToggleSwitch>\n    </n.Row>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <n.Row style={{"backgroundColor":"#eee","flex":1,"padding":30}}>
           <ui_toggle_switch.ToggleSwitch
@@ -33,7 +37,7 @@ function ToggleSwitchDemo(){
           </ui_toggle_switch.ToggleSwitch>
         </n.Row>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {"ToggleSwitchDemo":ToggleSwitchDemo};

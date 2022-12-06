@@ -18,7 +18,11 @@ import ui from '../js/react-native/physical-base'
 function DeltaDemo(){
   let [value,setValue] = React.useState(100);
   return (
-    <n.Enclosed label="pune.ui-market-delta/Delta">
+    <n.EnclosedCodeContainer
+      label="pune.ui-market-delta/Delta"
+      code={function (){
+        return "(\n  <n.Row>\n    <market_delta.Delta value={value}></market_delta.Delta>\n    <n.Fill></n.Fill>\n    <n.Row>\n      <ReactNative.Button\n        title=\"-1\"\n        style={{\"fontSize\":10}}\n        onPress={function (){\n          setValue(value - 1);\n        }}>\n      </ReactNative.Button>\n      <ReactNative.View style={{\"width\":10}}></ReactNative.View>\n      <ReactNative.Button\n        title=\"+1\"\n        onPress={function (){\n          setValue(value + 1);\n        }}>\n      </ReactNative.Button>\n    </n.Row>\n  </n.Row>);\n(\n  <n.Caption\n    text={JSON.stringify({value})}\n    style={{\"marginTop\":10,\"zIndex\":-100}}>\n  </n.Caption>);";
+      }()}>
       <n.Row>
         <market_delta.Delta value={value}></market_delta.Delta>
         <n.Fill></n.Fill>
@@ -43,7 +47,7 @@ function DeltaDemo(){
         text={JSON.stringify({value})}
         style={{"marginTop":10,"zIndex":-100}}>
       </n.Caption>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {"DeltaDemo":DeltaDemo};

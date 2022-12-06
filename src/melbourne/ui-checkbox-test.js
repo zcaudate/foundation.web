@@ -14,7 +14,11 @@ function CheckBoxDemo(){
   let [s1,setS1] = React.useState(true);
   let [s2,setS2] = React.useState(true);
   return (
-    <n.Enclosed label=" melbourne.ui-checkbox/CheckBox">
+    <n.EnclosedCodeContainer
+      label=" melbourne.ui-checkbox/CheckBox"
+      code={function (){
+        return "(\n  <n.Row>\n    <n.Row style={{\"backgroundColor\":\"#eee\",\"flex\":1,\"padding\":30}}>\n      <ui_checkbox.CheckBox\n        design={{\"type\":\"light\"}}\n        style={{\"margin\":2}}\n        selected={s0}\n        onPress={function (){\n          return setS0(!s0);\n        }}>\n      </ui_checkbox.CheckBox>\n      <ui_checkbox.CheckBox\n        design={{\"type\":\"light\",\"mode\":\"secondary\"}}\n        style={{\"margin\":2}}\n        selected={s1}\n        onPress={function (){\n          return setS1(!s1);\n        }}>\n      </ui_checkbox.CheckBox>\n      <ui_checkbox.CheckBox\n        design={{\"type\":\"light\"}}\n        style={{\"margin\":2}}\n        selected={s2}\n        onPress={function (){\n          return setS2(!s2);\n        }}>\n      </ui_checkbox.CheckBox>\n      <ui_checkbox.CheckBox\n        design={{\"type\":\"light\"}}\n        style={{\"margin\":2}}\n        selected={s2}\n        onPress={function (){\n          return setS2(!s2);\n        }}>\n      </ui_checkbox.CheckBox>\n    </n.Row>\n    <n.Row style={{\"backgroundColor\":\"#333\",\"flex\":1,\"padding\":30}}>\n      <ui_checkbox.CheckBox\n        design={{\"type\":\"dark\"}}\n        style={{\"margin\":2}}\n        selected={s0}\n        onPress={function (){\n          return setS0(!s0);\n        }}>\n      </ui_checkbox.CheckBox>\n      <ui_checkbox.CheckBox\n        design={{\"type\":\"dark\",\"mode\":\"secondary\"}}\n        style={{\"margin\":2}}\n        selected={s1}\n        onPress={function (){\n          return setS1(!s1);\n        }}>\n      </ui_checkbox.CheckBox>\n      <ui_checkbox.CheckBox\n        design={{\"type\":\"dark\"}}\n        style={{\"margin\":2}}\n        selected={s2}\n        onPress={function (){\n          return setS2(!s2);\n        }}>\n      </ui_checkbox.CheckBox>\n    </n.Row>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <n.Row style={{"backgroundColor":"#eee","flex":1,"padding":30}}>
           <ui_checkbox.CheckBox
@@ -77,14 +81,18 @@ function CheckBoxDemo(){
           </ui_checkbox.CheckBox>
         </n.Row>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.ui-checkbox-test/CheckGroupIndexedDemo [87] 
 function CheckGroupIndexedDemo(){
   let [indices,setIndices] = React.useState([false,true,false]);
   return (
-    <n.Enclosed label=" melbourne.ui-checkbox/CheckGroupIndexed">
+    <n.EnclosedCodeContainer
+      label=" melbourne.ui-checkbox/CheckGroupIndexed"
+      code={function (){
+        return "(\n  <n.Row>\n    <n.Row style={{\"backgroundColor\":\"#eee\",\"flex\":1,\"padding\":30}}>\n      <ui_checkbox.CheckGroupIndexed\n        design={{\"type\":\"light\"}}\n        items={[\" STATS \",\" XLM \",\" USD \"]}\n        indices={indices}\n        setIndices={setIndices}>\n      </ui_checkbox.CheckGroupIndexed>\n    </n.Row>\n    <n.Row style={{\"backgroundColor\":\"#333\",\"flex\":1,\"padding\":30}}>\n      <ui_checkbox.CheckGroupIndexed\n        design={{\"type\":\"dark\"}}\n        items={[\" STATS \",\" XLM \",\" USD \"]}\n        indices={indices}\n        setIndices={setIndices}>\n      </ui_checkbox.CheckGroupIndexed>\n    </n.Row>\n  </n.Row>);\n(\n  <n.TextDisplay content={JSON.stringify(indices)}></n.TextDisplay>);";
+      }()}>
       <n.Row>
         <n.Row style={{"backgroundColor":"#eee","flex":1,"padding":30}}>
           <ui_checkbox.CheckGroupIndexed
@@ -104,14 +112,18 @@ function CheckGroupIndexedDemo(){
         </n.Row>
       </n.Row>
       <n.TextDisplay content={JSON.stringify(indices)}></n.TextDisplay>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.ui-checkbox-test/CheckGroupDemo [121] 
 function CheckGroupDemo(){
   let [values,setValues] = React.useState(["USD"]);
   return (
-    <n.Enclosed label=" melbourne.ui-checkbox/CheckGroup">
+    <n.EnclosedCodeContainer
+      label=" melbourne.ui-checkbox/CheckGroup"
+      code={function (){
+        return "(\n  <n.Row>\n    <n.Row style={{\"backgroundColor\":\"#eee\",\"flex\":1,\"padding\":30}}>\n      <ui_checkbox.CheckGroup\n        design={{\"type\":\"light\"}}\n        data={[\"STATS\",\"XLM\",\"USD\"]}\n        values={values}\n        setValues={setValues}\n        format={function (s){\n          return \"  \" + s;\n        }}>\n      </ui_checkbox.CheckGroup>\n    </n.Row>\n    <n.Row style={{\"backgroundColor\":\"#333\",\"flex\":1,\"padding\":30}}>\n      <ui_checkbox.CheckGroup\n        design={{\"type\":\"dark\"}}\n        data={[\"STATS\",\"XLM\",\"USD\"]}\n        values={values}\n        setValues={setValues}\n        format={function (s){\n          return \"  \" + s;\n        }}>\n      </ui_checkbox.CheckGroup>\n    </n.Row>\n  </n.Row>);\n(\n  <n.TextDisplay content={JSON.stringify(values)}></n.TextDisplay>);";
+      }()}>
       <n.Row>
         <n.Row style={{"backgroundColor":"#eee","flex":1,"padding":30}}>
           <ui_checkbox.CheckGroup
@@ -137,7 +149,7 @@ function CheckGroupDemo(){
         </n.Row>
       </n.Row>
       <n.TextDisplay content={JSON.stringify(values)}></n.TextDisplay>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {

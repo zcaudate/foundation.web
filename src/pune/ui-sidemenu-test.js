@@ -12,7 +12,11 @@ import ui_sidemenu from './ui-sidemenu'
 function SideMenuTitleDemo(){
   let [routeKey,setRouteKey] = React.useState();
   return (
-    <n.Enclosed label="pune.ui-sidemenu/SideMenuTitle">
+    <n.EnclosedCodeContainer
+      label="pune.ui-sidemenu/SideMenuTitle"
+      code={function (){
+        return "(\n  <n.Row>\n    <ReactNative.View\n      style={{\n        \"padding\":10,\n        \"height\":100,\n        \"flexDirection\":\"column-reverse\",\n        \"paddingRight\":40,\n        \"backgroundColor\":\"#eee\"\n      }}>\n      <ui_sidemenu.SideMenuTitle\n        design={{\"type\":\"light\"}}\n        style={{\"height\":100}}\n        title=\"HELLO\">\n      </ui_sidemenu.SideMenuTitle>\n    </ReactNative.View>\n    <ReactNative.View\n      style={{\n        \"padding\":10,\n        \"height\":100,\n        \"flexDirection\":\"column-reverse\",\n        \"paddingRight\":40,\n        \"backgroundColor\":\"#333\"\n      }}>\n      <ui_sidemenu.SideMenuTitle design={{\"type\":\"dark\"}} style={{\"height\":100}} title=\"HELLO\"></ui_sidemenu.SideMenuTitle>\n    </ReactNative.View>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ReactNative.View
           style={{
@@ -39,14 +43,18 @@ function SideMenuTitleDemo(){
           <ui_sidemenu.SideMenuTitle design={{"type":"dark"}} style={{"height":100}} title="HELLO"></ui_sidemenu.SideMenuTitle>
         </ReactNative.View>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // pune.ui-sidemenu-test/SideMenuListDemo [52] 
 function SideMenuListDemo(){
   let [routeKey,setRouteKey] = React.useState();
   return (
-    <n.Enclosed label="pune.ui-sidemenu/SideMenuList">
+    <n.EnclosedCodeContainer
+      label="pune.ui-sidemenu/SideMenuList"
+      code={function (){
+        return "(\n  <n.Row>\n    <ReactNative.View\n      style={{\"padding\":10,\"paddingRight\":40,\"backgroundColor\":\"#eee\"}}>\n      <ui_sidemenu.SideMenuList\n        design={{\"type\":\"light\"}}\n        data={[\"Security\",\"Profile\",\"Notifications\",\"Organisation\"]}\n        routeKey={routeKey}\n        setRouteKey={setRouteKey}>\n      </ui_sidemenu.SideMenuList>\n    </ReactNative.View>\n    <ReactNative.View\n      style={{\"padding\":10,\"paddingRight\":40,\"backgroundColor\":\"#333\"}}>\n      <ui_sidemenu.SideMenuList\n        design={{\"type\":\"dark\"}}\n        data={[\"Security\",\"Profile\",\"Notifications\",\"Organisation\"]}\n        routeKey={routeKey}\n        setRouteKey={setRouteKey}>\n      </ui_sidemenu.SideMenuList>\n    </ReactNative.View>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ReactNative.View
           style={{"padding":10,"paddingRight":40,"backgroundColor":"#eee"}}>
@@ -67,7 +75,7 @@ function SideMenuListDemo(){
           </ui_sidemenu.SideMenuList>
         </ReactNative.View>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // pune.ui-sidemenu-test/SideMenuFloatingDemo [89] 
@@ -75,7 +83,11 @@ function SideMenuFloatingDemo(){
   let [routeKey,setRouteKey] = React.useState();
   return (
     <n.Isolation>
-      <n.Enclosed label="pune.ui-sidemenu/SideMenuFloating">
+      <n.EnclosedCodeContainer
+        label="pune.ui-sidemenu/SideMenuFloating"
+        code={function (){
+          return "(\n  <n.Row>\n    <ReactNative.View\n      style={{\n        \"flex\":1,\n        \"flexDirection\":\"row-reverse\",\n        \"padding\":10,\n        \"paddingRight\":40,\n        \"backgroundColor\":\"#eee\"\n      }}>\n      <ui_sidemenu.SideMenuFloating\n        design={{\"type\":\"light\"}}\n        data={[\"Security\",\"Profile\",\"Notifications\",\"Organisation\"]}\n        routeKey={routeKey}\n        setRouteKey={setRouteKey}>\n      </ui_sidemenu.SideMenuFloating>\n    </ReactNative.View>\n    <ReactNative.View\n      style={{\n        \"flex\":1,\n        \"flexDirection\":\"row-reverse\",\n        \"padding\":10,\n        \"paddingRight\":40,\n        \"backgroundColor\":\"#333\"\n      }}>\n      <ui_sidemenu.SideMenuFloating\n        design={{\"type\":\"dark\"}}\n        data={[\"Security\",\"Profile\",\"Notifications\",\"Organisation\"]}\n        routeKey={routeKey}\n        setRouteKey={setRouteKey}>\n      </ui_sidemenu.SideMenuFloating>\n    </ReactNative.View>\n  </n.Row>);\n(\n  <n.TextDisplay routeKey={routeKey}></n.TextDisplay>);";
+        }()}>
         <n.Row>
           <ReactNative.View
             style={{
@@ -109,7 +121,7 @@ function SideMenuFloatingDemo(){
           </ReactNative.View>
         </n.Row>
         <n.TextDisplay routeKey={routeKey}></n.TextDisplay>
-      </n.Enclosed>
+      </n.EnclosedCodeContainer>
     </n.Isolation>);
 }
 

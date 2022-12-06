@@ -16,7 +16,11 @@ import ui_section from './ui-section'
 function EnumMinorDemo(){
   let [values,setValues] = React.useState(["USD"]);
   return (
-    <n.Enclosed label="melbourne.ui-text/EnumMinor">
+    <n.EnclosedCodeContainer
+      label="melbourne.ui-text/EnumMinor"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_section.SectionBase design={{\"type\":\"light\"}}>\n      <ui_text.EnumMinor\n        design={{\"type\":\"light\"}}\n        data={[\"STATS\",\"XLM\",\"USD\"]}\n        values={values}\n        setValues={setValues}>\n      </ui_text.EnumMinor>\n    </ui_section.SectionBase>\n    <ui_section.SectionBase design={{\"type\":\"dark\"}}>\n      <ui_text.EnumMinor\n        design={{\"type\":\"dark\"}}\n        data={[\"STATS\",\"XLM\",\"USD\"]}\n        values={values}\n        setValues={setValues}>\n      </ui_text.EnumMinor>\n    </ui_section.SectionBase>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_section.SectionBase design={{"type":"light"}}>
           <ui_text.EnumMinor
@@ -35,14 +39,18 @@ function EnumMinorDemo(){
           </ui_text.EnumMinor>
         </ui_section.SectionBase>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.ui-text-test/TabsMinorDemo [49] 
 function TabsMinorDemo(){
   let [value,setValue] = React.useState("USD");
   return (
-    <n.Enclosed label="melbourne.ui-text/TabsMinor">
+    <n.EnclosedCodeContainer
+      label="melbourne.ui-text/TabsMinor"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_section.SectionBase design={{\"type\":\"light\"}}>\n      <ui_text.TabsMinor\n        design={{\"type\":\"light\"}}\n        data={[\"STATS\",\"XLM\",\"USD\"]}\n        value={value}\n        setValue={setValue}>\n      </ui_text.TabsMinor>\n    </ui_section.SectionBase>\n    <ui_section.SectionBase design={{\"type\":\"dark\"}}>\n      <ui_text.TabsMinor\n        design={{\"type\":\"dark\"}}\n        data={[\"STATS\",\"XLM\",\"USD\"]}\n        value={value}\n        setValue={setValue}>\n      </ui_text.TabsMinor>\n    </ui_section.SectionBase>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_section.SectionBase design={{"type":"light"}}>
           <ui_text.TabsMinor
@@ -61,14 +69,18 @@ function TabsMinorDemo(){
           </ui_text.TabsMinor>
         </ui_section.SectionBase>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.ui-text-test/EnumAccentDemo [75] 
 function EnumAccentDemo(){
   let [values,setValues] = React.useState(["USD"]);
   return (
-    <n.Enclosed label="melbourne.ui-text/EnumAccent">
+    <n.EnclosedCodeContainer
+      label="melbourne.ui-text/EnumAccent"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_section.SectionBase design={{\"type\":\"light\"}}>\n      <ui_text.EnumAccent\n        design={{\"type\":\"light\"}}\n        data={[\"STATS\",\"XLM\",\"USD\"]}\n        values={values}\n        setValues={setValues}>\n      </ui_text.EnumAccent>\n    </ui_section.SectionBase>\n    <ui_section.SectionBase design={{\"type\":\"dark\"}}>\n      <ui_text.EnumAccent\n        design={{\"type\":\"dark\"}}\n        data={[\"STATS\",\"XLM\",\"USD\"]}\n        values={values}\n        setValues={setValues}>\n      </ui_text.EnumAccent>\n    </ui_section.SectionBase>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_section.SectionBase design={{"type":"light"}}>
           <ui_text.EnumAccent
@@ -87,14 +99,18 @@ function EnumAccentDemo(){
           </ui_text.EnumAccent>
         </ui_section.SectionBase>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.ui-text-test/TabsAccentDemo [101] 
 function TabsAccentDemo(){
   let [value,setValue] = React.useState("USD");
   return (
-    <n.Enclosed label="melbourne.ui-text/TabsAccent">
+    <n.EnclosedCodeContainer
+      label="melbourne.ui-text/TabsAccent"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_section.SectionBase design={{\"type\":\"light\"}}>\n      <ui_text.TabsAccent\n        design={{\"type\":\"light\"}}\n        data={[\"STATS\",\"XLM\",\"USD\"]}\n        value={value}\n        setValue={setValue}>\n      </ui_text.TabsAccent>\n    </ui_section.SectionBase>\n    <ui_section.SectionBase design={{\"type\":\"dark\"}}>\n      <ui_text.TabsAccent\n        design={{\"type\":\"dark\"}}\n        data={[\"STATS\",\"XLM\",\"USD\"]}\n        value={value}\n        setValue={setValue}>\n      </ui_text.TabsAccent>\n    </ui_section.SectionBase>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_section.SectionBase design={{"type":"light"}}>
           <ui_text.TabsAccent
@@ -113,7 +129,7 @@ function TabsAccentDemo(){
           </ui_text.TabsAccent>
         </ui_section.SectionBase>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.ui-text-test/HeaderBaseDemo [130] 
@@ -123,7 +139,11 @@ function HeaderBaseDemo(){
   let [foil,setFoil] = React.useState("background");
   let palette = base_palette.createPalette(type,color);
   return (
-    <n.Enclosed label="melbourne.ui-text/createHeaderFn">
+    <n.EnclosedCodeContainer
+      label="melbourne.ui-text/createHeaderFn"
+      code={function (){
+        return "(\n  <n.Row>\n    <n.Tabs\n      data={[\"purple\",\"teal\",\"blue\",\"green\"]}\n      value={color}\n      setValue={setColor}>\n    </n.Tabs>\n    <ReactNative.Text>   </ReactNative.Text>\n    <n.Tabs data={[\"light\",\"dark\"]} value={type} setValue={setType}></n.Tabs>\n  </n.Row>);\n(\n  <n.Tabs\n    data={[\"background\",\"primary\",\"neutral\",\"error\"]}\n    value={foil}\n    setValue={setFoil}>\n  </n.Tabs>);\n(\n  <n.Row>\n    <ReactNative.View\n      style={{\n        \"backgroundColor\":base_palette.getColorRaw(palette,foil || \"background\")\n      }}>\n      {[\n        ui_text.H1,\n        ui_text.H2,\n        ui_text.H3,\n        ui_text.H4,\n        ui_text.H5,\n        ui_text.H6\n      ].map(function (Component,i){\n        return (\n          <ReactNative.View key={i} style={{\"padding\":10}}><Component design={{color,type}}>HELLO</Component></ReactNative.View>);\n      })}\n    </ReactNative.View>\n    <ReactNative.View\n      style={{\n        \"backgroundColor\":base_palette.getColorRaw(palette,foil || \"background\")\n      }}>\n      {[\n        ui_text.H1,\n        ui_text.H2,\n        ui_text.H3,\n        ui_text.H4,\n        ui_text.H5,\n        ui_text.H6\n      ].map(function (Component,i){\n        return (\n          <ReactNative.View key={i} style={{\"padding\":10}}>\n            <Component\n              design={{color,type}}\n              designOverride={{\"variant\":{\"fg\":{\"key\":\"neutral\",\"tone\":\"sharpen\"}}}}>HELLO\n            </Component>\n          </ReactNative.View>);\n      })}\n    </ReactNative.View>\n    <ReactNative.View\n      style={{\n        \"backgroundColor\":base_palette.getColorRaw(palette,foil || \"background\")\n      }}>\n      {[\n        ui_text.H1,\n        ui_text.H2,\n        ui_text.H3,\n        ui_text.H4,\n        ui_text.H5,\n        ui_text.H6\n      ].map(function (Component,i){\n        return (\n          <ReactNative.View key={i} style={{\"padding\":10}}>\n            <Component\n              design={{color,type}}\n              designOverride={{\"variant\":{\"fg\":{\"key\":\"background\",\"tone\":\"flatten\"}}}}>HELLO\n            </Component>\n          </ReactNative.View>);\n      })}\n    </ReactNative.View>\n    <ReactNative.View\n      style={{\n        \"backgroundColor\":base_palette.getColorRaw(palette,foil || \"background\")\n      }}>\n      {[\n        ui_text.H1,\n        ui_text.H2,\n        ui_text.H3,\n        ui_text.H4,\n        ui_text.H5,\n        ui_text.H6\n      ].map(function (Component,i){\n        return (\n          <ReactNative.View key={i} style={{\"padding\":10}}>\n            <Component\n              design={{color,type}}\n              designOverride={{\"variant\":{\"fg\":{\"key\":\"error\"}}}}>HELLO\n            </Component>\n          </ReactNative.View>);\n      })}\n    </ReactNative.View>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <n.Tabs
           data={["purple","teal","blue","green"]}
@@ -219,7 +239,7 @@ function HeaderBaseDemo(){
           })}
         </ReactNative.View>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.ui-text-test/TextBaseDemo [236] 
@@ -229,7 +249,11 @@ function TextBaseDemo(){
   let [foil,setFoil] = React.useState("background");
   let palette = base_palette.createPalette(type,color);
   return (
-    <n.Enclosed label="melbourne.ui-text/createTextFn">
+    <n.EnclosedCodeContainer
+      label="melbourne.ui-text/createTextFn"
+      code={function (){
+        return "(\n  <n.Row>\n    <n.Tabs\n      data={[\"purple\",\"teal\",\"blue\",\"green\"]}\n      value={color}\n      setValue={setColor}>\n    </n.Tabs>\n    <ReactNative.Text>   </ReactNative.Text>\n    <n.Tabs data={[\"light\",\"dark\"]} value={type} setValue={setType}></n.Tabs>\n  </n.Row>);\n(\n  <n.Tabs\n    data={[\"background\",\"primary\",\"neutral\",\"error\"]}\n    value={foil}\n    setValue={setFoil}>\n  </n.Tabs>);\n(\n  <n.Row>\n    <ReactNative.View\n      style={{\n        \"backgroundColor\":base_palette.getColorRaw(palette,foil || \"background\")\n      }}>\n      {[ui_text.P,ui_text.Caption].map(function (Component,i){\n        return (\n          <ReactNative.View key={i} style={{\"padding\":10}}><Component design={{color,type}}>HELLO</Component></ReactNative.View>);\n      })}\n    </ReactNative.View>\n    <ReactNative.View\n      style={{\n        \"backgroundColor\":base_palette.getColorRaw(palette,foil || \"background\")\n      }}>\n      {[ui_text.P,ui_text.Caption].map(function (Component,i){\n        return (\n          <ReactNative.View key={i} style={{\"padding\":10}}>\n            <Component\n              design={{color,type}}\n              variant={{\"fg\":{\"key\":\"background\"},\"bg\":{\"key\":\"primary\"}}}>HELLO\n            </Component>\n          </ReactNative.View>);\n      })}\n    </ReactNative.View>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <n.Tabs
           data={["purple","teal","blue","green"]}
@@ -269,13 +293,17 @@ function TextBaseDemo(){
           })}
         </ReactNative.View>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.ui-text-test/ActivityIndicatorDemo [295] 
 function ActivityIndicatorDemo(){
   return (
-    <n.Enclosed label="melbourne.ui-text/ActivityIndicator">
+    <n.EnclosedCodeContainer
+      label="melbourne.ui-text/ActivityIndicator"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_section.SectionBase design={{\"type\":\"light\"}}>\n      <ui_text.ActivityIndicator design={{\"type\":\"light\"}}></ui_text.ActivityIndicator>\n      <ui_text.ActivityIndicator design={{\"type\":\"light\"}} size={100}></ui_text.ActivityIndicator>\n    </ui_section.SectionBase>\n    <ui_section.SectionBase design={{\"type\":\"dark\"}}>\n      <ui_text.ActivityIndicator design={{\"type\":\"dark\"}}></ui_text.ActivityIndicator>\n      <ui_text.ActivityIndicator design={{\"type\":\"light\"}} size={100}></ui_text.ActivityIndicator>\n    </ui_section.SectionBase>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_section.SectionBase design={{"type":"light"}}>
           <ui_text.ActivityIndicator design={{"type":"light"}}></ui_text.ActivityIndicator>
@@ -286,13 +314,17 @@ function ActivityIndicatorDemo(){
           <ui_text.ActivityIndicator design={{"type":"light"}} size={100}></ui_text.ActivityIndicator>
         </ui_section.SectionBase>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.ui-text-test/IconDemo [320] 
 function IconDemo(){
   return (
-    <n.Enclosed label="melbourne.ui-text/Icon">
+    <n.EnclosedCodeContainer
+      label="melbourne.ui-text/Icon"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_section.SectionBase design={{\"type\":\"light\"}}>\n      <ui_text.Icon design={{\"type\":\"light\"}} name=\"close\"></ui_text.Icon>\n      <ui_text.Icon design={{\"type\":\"light\"}} name=\"close\" size={100}></ui_text.Icon>\n    </ui_section.SectionBase>\n    <ui_section.SectionBase design={{\"type\":\"dark\"}}>\n      <ui_text.Icon design={{\"type\":\"dark\"}} name=\"close\"></ui_text.Icon>\n      <ui_text.Icon design={{\"type\":\"light\"}} name=\"close\" size={100}></ui_text.Icon>\n    </ui_section.SectionBase>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_section.SectionBase design={{"type":"light"}}>
           <ui_text.Icon design={{"type":"light"}} name="close"></ui_text.Icon>
@@ -303,13 +335,17 @@ function IconDemo(){
           <ui_text.Icon design={{"type":"light"}} name="close" size={100}></ui_text.Icon>
         </ui_section.SectionBase>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.ui-text-test/AvatarDemo [349] 
 function AvatarDemo(){
   return (
-    <n.Enclosed label="melbourne.ui-text/Avatar">
+    <n.EnclosedCodeContainer
+      label="melbourne.ui-text/Avatar"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_section.SectionBase design={{\"type\":\"light\"}}>\n      <ui_text.Avatar design={{\"type\":\"light\"}} text=\"H\"></ui_text.Avatar>\n      <ui_text.Avatar design={{\"type\":\"light\"}} text=\"H\" size={100}></ui_text.Avatar>\n    </ui_section.SectionBase>\n    <ui_section.SectionBase design={{\"type\":\"dark\"}}>\n      <ui_text.Avatar design={{\"type\":\"dark\"}} text=\"H\"></ui_text.Avatar>\n      <ui_text.Avatar design={{\"type\":\"light\"}} text=\"H\" size={100}></ui_text.Avatar>\n    </ui_section.SectionBase>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_section.SectionBase design={{"type":"light"}}>
           <ui_text.Avatar design={{"type":"light"}} text="H"></ui_text.Avatar>
@@ -320,7 +356,7 @@ function AvatarDemo(){
           <ui_text.Avatar design={{"type":"light"}} text="H" size={100}></ui_text.Avatar>
         </ui_section.SectionBase>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.ui-text-test/MinorBaseDemo [387] 
@@ -350,9 +386,12 @@ function MinorBaseDemo(){
     )
   ];
   return (
-    <n.Enclosed
+    <n.EnclosedCodeContainer
       key={type + "." + color}
-      label="melbourne.ui-text/createMinorFn">
+      label="melbourne.ui-text/createMinorFn"
+      code={function (){
+        return "(\n  <n.Row>\n    <n.Tabs\n      data={[\"purple\",\"teal\",\"blue\",\"green\"]}\n      value={color}\n      setValue={setColor}>\n    </n.Tabs>\n    <ReactNative.Text>   </ReactNative.Text>\n    <n.Tabs data={[\"light\",\"dark\"]} value={type} setValue={setType}></n.Tabs>\n  </n.Row>);\n(\n  <n.Tabs\n    data={[\"background\",\"primary\",\"neutral\",\"error\"]}\n    value={foil}\n    setValue={setFoil}>\n  </n.Tabs>);\n(\n  <n.Row>\n    {overrides.map(function (override,i){\n      return (\n        <ReactNative.View\n          key={i}\n          style={{\n            \"backgroundColor\":base_palette.getColorRaw(palette,foil || \"background\")\n          }}>\n          {components.map(function (Component,i){\n            return (\n              <ReactNative.View key={i} style={{\"padding\":10}}>\n                <Component\n                  design={{color,type}}\n                  variant={override}\n                  selected={selected}\n                  onPress={function (){\n                    return setSelected(!selected);\n                  }}\n                  text=\"HELLO\">\n                </Component>\n              </ReactNative.View>);\n          })}\n        </ReactNative.View>);\n    })}\n  </n.Row>);";
+      }()}>
       <n.Row>
         <n.Tabs
           data={["purple","teal","blue","green"]}
@@ -392,7 +431,7 @@ function MinorBaseDemo(){
             </ReactNative.View>);
         })}
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.ui-text-test/AccentBaseDemo [469] 
@@ -422,9 +461,12 @@ function AccentBaseDemo(){
     )
   ];
   return (
-    <n.Enclosed
+    <n.EnclosedCodeContainer
       key={type + "." + color}
-      label="melbourne.ui-text/createAccentFn">
+      label="melbourne.ui-text/createAccentFn"
+      code={function (){
+        return "(\n  <n.Row>\n    <n.Tabs\n      data={[\"purple\",\"teal\",\"blue\",\"green\"]}\n      value={color}\n      setValue={setColor}>\n    </n.Tabs>\n    <ReactNative.Text>   </ReactNative.Text>\n    <n.Tabs data={[\"light\",\"dark\"]} value={type} setValue={setType}></n.Tabs>\n  </n.Row>);\n(\n  <n.Tabs\n    data={[\"background\",\"primary\",\"neutral\",\"error\"]}\n    value={foil}\n    setValue={setFoil}>\n  </n.Tabs>);\n(\n  <n.Row>\n    {overrides.map(function (override,i){\n      return (\n        <ReactNative.View\n          key={i}\n          style={{\n            \"backgroundColor\":base_palette.getColorRaw(palette,foil || \"background\")\n          }}>\n          {components.map(function (Component,i){\n            return (\n              <ReactNative.View key={i} style={{\"padding\":10}}>\n                <Component\n                  design={{color,type}}\n                  variant={override}\n                  selected={selected}\n                  onPress={function (){\n                    return setSelected(!selected);\n                  }}\n                  text=\"HELLO\">\n                </Component>\n              </ReactNative.View>);\n          })}\n        </ReactNative.View>);\n    })}\n  </n.Row>);";
+      }()}>
       <n.Row>
         <n.Tabs
           data={["purple","teal","blue","green"]}
@@ -464,7 +506,7 @@ function AccentBaseDemo(){
             </ReactNative.View>);
         })}
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.ui-text-test/ButtonTooltipDemo [548] 
@@ -475,7 +517,11 @@ function ButtonTooltipDemo(){
   },[]);
   return (
     <n.Isolation>
-      <n.Enclosed label="melbourne.ui-text/ButtonTooltip">
+      <n.EnclosedCodeContainer
+        label="melbourne.ui-text/ButtonTooltip"
+        code={function (){
+          return "(\n  <n.Row>\n    <ui_section.SectionBase design={{\"type\":\"light\"}}>\n      <n.Row>\n        <ui_text.ButtonTooltip\n          design={{\"type\":\"light\"}}\n          mainComponent={mainComponent}\n          text=\"Press\"\n          tooltip={{\"position\":\"top\"}}\n          onPress={function (){\n            return alert(\"HELLO\");\n          }}>\n        </ui_text.ButtonTooltip>\n        <ui_text.ButtonTooltip\n          design={{\"type\":\"light\"}}\n          mainComponent={mainComponent}\n          component=\"accent\"\n          text=\"Press\"\n          tooltip={{\"position\":\"left\"}}\n          onPress={function (){\n            return alert(\"HELLO\");\n          }}>\n        </ui_text.ButtonTooltip>\n      </n.Row>\n    </ui_section.SectionBase>\n    <ui_section.SectionBase design={{\"type\":\"dark\"}}>\n      <n.Row>\n        <ui_text.ButtonTooltip\n          design={{\"type\":\"dark\"}}\n          mainComponent={mainComponent}\n          text=\"Press\"\n          onPress={function (){\n            return alert(\"HELLO\");\n          }}>\n        </ui_text.ButtonTooltip>\n        <ui_text.ButtonTooltip\n          design={{\"type\":\"dark\"}}\n          mainComponent={mainComponent}\n          component=\"accent\"\n          tooltip={{\"position\":\"right\"}}\n          text=\"Press\"\n          onPress={function (){\n            return alert(\"HELLO\");\n          }}>\n        </ui_text.ButtonTooltip>\n      </n.Row>\n    </ui_section.SectionBase>\n  </n.Row>);";
+        }()}>
         <n.Row>
           <ui_section.SectionBase design={{"type":"light"}}>
             <n.Row>
@@ -523,7 +569,7 @@ function ButtonTooltipDemo(){
             </n.Row>
           </ui_section.SectionBase>
         </n.Row>
-      </n.Enclosed>
+      </n.EnclosedCodeContainer>
     </n.Isolation>);
 }
 
@@ -531,7 +577,11 @@ function ButtonTooltipDemo(){
 function ConfirmTooltipDemo(){
   return (
     <n.Isolation>
-      <n.Enclosed label="melbourne.ui-text/ConfirmTooltip">
+      <n.EnclosedCodeContainer
+        label="melbourne.ui-text/ConfirmTooltip"
+        code={function (){
+          return "(\n  <n.Row>\n    <ui_section.SectionBase design={{\"type\":\"light\"}}>\n      <n.Row>\n        <ui_text.ConfirmTooltip\n          design={{\"type\":\"light\"}}\n          text=\"Press\"\n          onPress={function (){\n            return alert(\"HELLO\");\n          }}>\n        </ui_text.ConfirmTooltip>\n        <ui_text.ConfirmTooltip\n          design={{\"type\":\"light\"}}\n          component=\"accent\"\n          text=\"Press\"\n          onPress={function (){\n            return alert(\"HELLO\");\n          }}>\n        </ui_text.ConfirmTooltip>\n      </n.Row>\n    </ui_section.SectionBase>\n    <ui_section.SectionBase design={{\"type\":\"dark\"}}>\n      <n.Row>\n        <ui_text.ConfirmTooltip\n          design={{\"type\":\"dark\"}}\n          text=\"Press\"\n          onPress={function (){\n            return alert(\"HELLO\");\n          }}>\n        </ui_text.ConfirmTooltip>\n        <ui_text.ConfirmTooltip\n          design={{\"type\":\"dark\"}}\n          component=\"accent\"\n          text=\"Press\"\n          onPress={function (){\n            return alert(\"HELLO\");\n          }}>\n        </ui_text.ConfirmTooltip>\n      </n.Row>\n    </ui_section.SectionBase>\n  </n.Row>);";
+        }()}>
         <n.Row>
           <ui_section.SectionBase design={{"type":"light"}}>
             <n.Row>
@@ -572,14 +622,18 @@ function ConfirmTooltipDemo(){
             </n.Row>
           </ui_section.SectionBase>
         </n.Row>
-      </n.Enclosed>
+      </n.EnclosedCodeContainer>
     </n.Isolation>);
 }
 
 // melbourne.ui-text-test/TextAltDemo [635] 
 function TextAltDemo(){
   return (
-    <n.Enclosed label="melbourne.ui-text/TextAlt">
+    <n.EnclosedCodeContainer
+      label="melbourne.ui-text/TextAlt"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_section.SectionBase design={{\"type\":\"light\"}}>\n      <n.Row>\n        <ui_text.TextAlt design={{\"type\":\"light\"}} value={{\"a\":1,\"b\":2}}></ui_text.TextAlt>\n      </n.Row>\n    </ui_section.SectionBase>\n    <ui_section.SectionBase design={{\"type\":\"dark\"}}>\n      <n.Row>\n        <ui_text.TextAlt design={{\"type\":\"dark\"}} value={{\"a\":1,\"b\":2}}></ui_text.TextAlt>\n      </n.Row>\n    </ui_section.SectionBase>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_section.SectionBase design={{"type":"light"}}>
           <n.Row>
@@ -592,7 +646,7 @@ function TextAltDemo(){
           </n.Row>
         </ui_section.SectionBase>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {

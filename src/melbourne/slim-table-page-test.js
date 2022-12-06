@@ -98,7 +98,11 @@ function TableListPagedDemo(){
   let components = {"entry_brief":EntryBrief};
   return (
     <n.Isolation>
-      <n.Enclosed label="melbourne.slim-table-page/TableListPaged">
+      <n.EnclosedCodeContainer
+        label="melbourne.slim-table-page/TableListPaged"
+        code={function (){
+          return "(\n  <n.Row style={{\"height\":400}}>\n    <ReactNative.ScrollView>\n      <slim_table_list.TableList\n        mini={true}\n        design={{\"type\":\"light\"}}\n        style={{\"minWidth\":200}}\n        display={{\n          \"brief\":{\"card\":{\"component\":\"mini\"}},\n          \"list\":{\"page\":{\"display\":5}}\n        }}\n        views={views}\n        components={components}\n        control={control}>\n      </slim_table_list.TableList>\n    </ReactNative.ScrollView>\n  </n.Row>);";
+        }()}>
         <n.Row style={{"height":400}}>
           <ReactNative.ScrollView>
             <slim_table_list.TableList
@@ -115,7 +119,7 @@ function TableListPagedDemo(){
             </slim_table_list.TableList>
           </ReactNative.ScrollView>
         </n.Row>
-      </n.Enclosed>
+      </n.EnclosedCodeContainer>
     </n.Isolation>);
 }
 
@@ -195,7 +199,11 @@ function TableListRemotePagedDemo(){
   let components = {"entry_brief":EntryBrief};
   return (
     <n.Isolation>
-      <n.Enclosed label="melbourne.slim-table-page/TableListRemotePaged">
+      <n.EnclosedCodeContainer
+        label="melbourne.slim-table-page/TableListRemotePaged"
+        code={function (){
+          return "(\n  <n.Row style={{\"height\":400}}>\n    <ReactNative.ScrollView>\n      <slim_table_list.TableList\n        mini={true}\n        design={{\"type\":\"light\"}}\n        style={{\"minWidth\":200}}\n        display={{\n          \"brief\":{\"card\":{\"component\":\"mini\"}},\n          \"list\":{\"page\":{\"remote\":true,\"total\":200,\"display\":5}}\n        }}\n        views={views}\n        components={components}\n        control={control}>\n      </slim_table_list.TableList>\n    </ReactNative.ScrollView>\n  </n.Row>);";
+        }()}>
         <n.Row style={{"height":400}}>
           <ReactNative.ScrollView>
             <slim_table_list.TableList
@@ -212,7 +220,7 @@ function TableListRemotePagedDemo(){
             </slim_table_list.TableList>
           </ReactNative.ScrollView>
         </n.Row>
-      </n.Enclosed>
+      </n.EnclosedCodeContainer>
     </n.Isolation>);
 }
 

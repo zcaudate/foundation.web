@@ -14,11 +14,15 @@ import ui_chip_input from './ui-chip-input'
 function ChipInputDemo(){
   let [values,setValues] = React.useState(["hello","world"]);
   return (
-    <n.Enclosed label="melbourne.ui-chip-input/ChipInput">
+    <n.EnclosedCodeContainer
+      label="melbourne.ui-chip-input/ChipInput"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_chip_input.ChipInput values={values} setValues={setValues}></ui_chip_input.ChipInput>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_chip_input.ChipInput values={values} setValues={setValues}></ui_chip_input.ChipInput>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {"ChipInputDemo":ChipInputDemo};

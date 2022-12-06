@@ -31,9 +31,12 @@ function TopNotifyInnerDemo(){
     }
   ]);
   return (
-    <n.Enclosed
+    <n.EnclosedCodeContainer
       label="pune.ui-notify-base/TopNotifyInner"
-      style={{"backgroundColor":"#eee","padding":20}}>
+      style={{"backgroundColor":"#eee","padding":20}}
+      code={function (){
+        return "(\n  <ReactNative.View>\n    <ui_topnotify.TopNotifyInner data={[]} design={{\"type\":\"light\"}}></ui_topnotify.TopNotifyInner>\n  </ReactNative.View>);\n(\n  <ReactNative.View>\n    <n.Row style={{\"marginVertical\":5}}></n.Row>\n    <ui_topnotify.TopNotifyInner\n      data={[\n        {\n        \"id\":\"01\",\n        \"topic\":\"user.account/password-changed\",\n        \"title\":\"Password Changed\",\n        \"message\":\"user: test00001\",\n        \"time\":Date.now()\n      }\n      ]}\n      design={{\"type\":\"light\"}}>\n    </ui_topnotify.TopNotifyInner>\n  </ReactNative.View>);\n(\n  <ReactNative.View>\n    <n.Row style={{\"marginVertical\":5}}></n.Row>\n    <ui_topnotify.TopNotifyInner\n      data={data}\n      design={{\"type\":\"light\"}}\n      index={index}\n      setIndex={setIndex}>\n    </ui_topnotify.TopNotifyInner>\n  </ReactNative.View>);";
+      }()}>
       <ReactNative.View>
         <ui_topnotify.TopNotifyInner data={[]} design={{"type":"light"}}></ui_topnotify.TopNotifyInner>
       </ReactNative.View>
@@ -61,7 +64,7 @@ function TopNotifyInnerDemo(){
           setIndex={setIndex}>
         </ui_topnotify.TopNotifyInner>
       </ReactNative.View>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // pune.ui-notify-base-test/TopNotifyDemo [74] 
@@ -85,9 +88,12 @@ function TopNotifyDemo(){
     }
   ]);
   return (
-    <n.Enclosed
+    <n.EnclosedCodeContainer
       label="pune.ui-notify-base/TopNotify"
-      style={{"backgroundColor":"#333","padding":20}}>
+      style={{"backgroundColor":"#333","padding":20}}
+      code={function (){
+        return "(\n  <n.Isolation>\n    <n.Row style={{\"marginVertical\":5,\"width\":300,\"height\":80}}>\n      <ui_topnotify.TopNotify\n        mini={true}\n        data={[\n          {\n          \"id\":\"01\",\n          \"topic\":\"user.account/password-changed\",\n          \"title\":\"Password Changed\",\n          \"message\":\"user: test00001\",\n          \"time\":Date.now()\n        }\n        ]}\n        design={{\"type\":\"dark\"}}>\n      </ui_topnotify.TopNotify>\n    </n.Row>\n  </n.Isolation>);\n(\n  <n.Isolation>\n    <n.Row style={{\"marginVertical\":5,\"width\":300,\"height\":80}}>\n      <ui_topnotify.TopNotify\n        mini={true}\n        data={data}\n        design={{\"type\":\"dark\"}}\n        index={index}\n        setIndex={setIndex}>\n      </ui_topnotify.TopNotify>\n    </n.Row>\n  </n.Isolation>);";
+      }()}>
       <n.Isolation>
         <n.Row style={{"marginVertical":5,"width":300,"height":80}}>
           <ui_topnotify.TopNotify
@@ -116,7 +122,7 @@ function TopNotifyDemo(){
           </ui_topnotify.TopNotify>
         </n.Row>
       </n.Isolation>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {

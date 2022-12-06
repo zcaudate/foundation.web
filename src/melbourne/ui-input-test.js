@@ -89,7 +89,11 @@ function InputLightExamples(){
   },RegistraionValidators);
   let {data,result} = ext_form.listenForm(form);
   return (
-    <n.Enclosed label="melbourne.ui-input/Input.Light">
+    <n.EnclosedCodeContainer
+      label="melbourne.ui-input/Input.Light"
+      code={function (){
+        return "(\n  <ReactNative.View style={{\"borderRadius\":10,\"width\":350,\"overflow\":\"hidden\"}}>\n    <n.Row style={{\"backgroundColor\":\"#eee\",\"width\":350,\"padding\":10}}></n.Row>\n    <n.Row>\n      <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"width\":350,\"padding\":10}}>\n        <n.Row style={{\"padding\":5}}>\n          <ReactNative.Text style={styleInputLabel({\"mainNeutral\":\"#333\"})}>First Name</ReactNative.Text>\n          <ui_input.Input\n            design={{\"type\":\"light\"}}\n            highlighted={event_form.check_field_errored(form,\"first_name\")}\n            value={data[\"first_name\"]}\n            onBlur={function (){\n              event_form.validate_field(form,\"first_name\");\n            }}\n            onChangeText={function (v){\n              event_form.set_field(form,\"first_name\",v);\n              event_form.validate_field(form,\"first_name\");\n            }}\n            addons={[inputAsterix({\"type\":\"light\"})]}>\n          </ui_input.Input>\n        </n.Row>\n        <n.Row style={{\"padding\":5}}>\n          <ReactNative.Text style={styleInputLabel({\"mainNeutral\":\"#333\"})}>Last Name</ReactNative.Text>\n          <ui_input.Input\n            design={{\"type\":\"light\"}}\n            highlighted={event_form.check_field_errored(form,\"last_name\")}\n            value={data[\"last_name\"]}\n            onBlur={function (){\n              event_form.validate_field(form,\"last_name\");\n            }}\n            onChangeText={function (v){\n              event_form.set_field(form,\"last_name\",v);\n              event_form.validate_field(form,\"last_name\");\n            }}\n            addons={[inputAsterix({\"type\":\"light\"})]}>\n          </ui_input.Input>\n        </n.Row>\n        <n.Row\n          style={{\"marginTop\":10,\"padding\":5,\"flexDirection\":\"row-reverse\"}}>\n          <ui_button.Button\n            disabled={!event_form.check_all_passed(form)}\n            design={{\"type\":\"light\"}}\n            style={{\"fontSize\":12,\"fontWeight\":\"800\"}}\n            text=\"Register\">\n          </ui_button.Button>\n          <ui_button.Button\n            design={{\"type\":\"light\",\"theme\":{\"bg\":{\"key\":\"neutral\"}}}}\n            style={{\"fontSize\":12,\"fontWeight\":\"800\",\"marginHorizontal\":10}}\n            onPress={function (){\n              return event_form.reset_all(form);\n            }}\n            text=\"Cancel\">\n          </ui_button.Button>\n        </n.Row>\n      </ReactNative.View>\n    </n.Row>\n  </ReactNative.View>);";
+      }()}>
       <ReactNative.View style={{"borderRadius":10,"width":350,"overflow":"hidden"}}>
         <n.Row style={{"backgroundColor":"#eee","width":350,"padding":10}}></n.Row>
         <n.Row>
@@ -146,7 +150,7 @@ function InputLightExamples(){
           </ReactNative.View>
         </n.Row>
       </ReactNative.View>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.ui-input-test/InputDarkExamples [147] 
@@ -156,7 +160,11 @@ function InputDarkExamples(){
   },RegistraionValidators);
   let {data,result} = ext_form.listenForm(form);
   return (
-    <n.Enclosed label="melbourne.ui-input/Input.Dark">
+    <n.EnclosedCodeContainer
+      label="melbourne.ui-input/Input.Dark"
+      code={function (){
+        return "(\n  <ReactNative.View style={{\"borderRadius\":10,\"width\":350,\"overflow\":\"hidden\"}}>\n    <n.Row style={{\"backgroundColor\":\"#333\",\"width\":350,\"padding\":10}}></n.Row>\n    <n.Row>\n      <ReactNative.View style={{\"backgroundColor\":\"#333\",\"width\":350,\"padding\":10}}>\n        <n.Row style={{\"padding\":5}}>\n          <ReactNative.Text style={styleInputLabel({\"mainNeutral\":\"#eee\"})}>First Name</ReactNative.Text>\n          <ui_input.Input\n            design={{\"type\":\"dark\"}}\n            highlighted={event_form.check_field_errored(form,\"first_name\")}\n            value={data[\"first_name\"]}\n            onBlur={function (){\n              event_form.validate_field(form,\"first_name\");\n            }}\n            onChangeText={function (v){\n              event_form.set_field(form,\"first_name\",v);\n              event_form.validate_field(form,\"first_name\");\n            }}\n            addons={[inputAsterix({\"type\":\"dark\"})]}>\n          </ui_input.Input>\n        </n.Row>\n        <n.Row style={{\"padding\":5}}>\n          <ReactNative.Text style={styleInputLabel({\"mainNeutral\":\"#eee\"})}>Last Name</ReactNative.Text>\n          <ui_input.Input\n            design={{\"type\":\"dark\"}}\n            highlighted={event_form.check_field_errored(form,\"last_name\")}\n            value={data[\"last_name\"]}\n            onBlur={function (){\n              event_form.validate_field(form,\"last_name\");\n            }}\n            onChangeText={function (v){\n              event_form.set_field(form,\"last_name\",v);\n              event_form.validate_field(form,\"last_name\");\n            }}\n            addons={[inputAsterix({\"type\":\"dark\"})]}>\n          </ui_input.Input>\n        </n.Row>\n        <n.Row\n          style={{\"marginTop\":10,\"padding\":5,\"flexDirection\":\"row-reverse\"}}>\n          <ui_button.Button\n            disabled={!event_form.check_all_passed(form)}\n            design={{\"type\":\"dark\"}}\n            style={{\"fontSize\":12,\"fontWeight\":\"800\"}}\n            text=\"Register\">\n          </ui_button.Button>\n          <ui_button.Button\n            design={{\"type\":\"dark\",\"theme\":{\"bg\":{\"key\":\"neutral\"}}}}\n            style={{\"fontSize\":12,\"fontWeight\":\"800\",\"marginHorizontal\":10}}\n            onPress={function (){\n              return event_form.reset_all(form);\n            }}\n            text=\"Cancel\">\n          </ui_button.Button>\n        </n.Row>\n      </ReactNative.View>\n    </n.Row>\n  </ReactNative.View>);";
+      }()}>
       <ReactNative.View style={{"borderRadius":10,"width":350,"overflow":"hidden"}}>
         <n.Row style={{"backgroundColor":"#333","width":350,"padding":10}}></n.Row>
         <n.Row>
@@ -213,7 +221,7 @@ function InputDarkExamples(){
           </ReactNative.View>
         </n.Row>
       </ReactNative.View>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {

@@ -14,11 +14,15 @@ import ui_color_input from './ui-color-input'
 function ColorInputDemo(){
   let [value,setValue] = React.useState("#ccc");
   return (
-    <n.Enclosed label="melbourne.ui-color-input/ColorInput">
+    <n.EnclosedCodeContainer
+      label="melbourne.ui-color-input/ColorInput"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_color_input.ColorInput value={value} setValue={setValue}></ui_color_input.ColorInput>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_color_input.ColorInput value={value} setValue={setValue}></ui_color_input.ColorInput>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {"ColorInputDemo":ColorInputDemo};

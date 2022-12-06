@@ -16,9 +16,12 @@ function ToolbarOverlayTooltipDemo(){
   let hostRef = React.useRef();
   return (
     <n.Isolation>
-      <n.Enclosed
+      <n.EnclosedCodeContainer
         label="melbourne.ui-toolbar/ToolbarOverlayTooltip"
-        style={{"height":100}}>
+        style={{"height":100}}
+        code={function (){
+          return "(\n  <ui_toolbar.Toolbar design={{\"type\":\"dark\"}}>\n    <ui_text.ToggleAccent\n      design={{\"type\":\"dark\"}}\n      variant={ui_toolbar.accentStandard()}\n      text=\"OVERLAY\"\n      selected={visible}\n      onPress={function (){\n        return setVisible(!visible);\n      }}>\n    </ui_text.ToggleAccent>\n  </ui_toolbar.Toolbar>);\n(\n  <ReactNative.View ref={hostRef}></ReactNative.View>);\n(\n  <ui_toolbar.ToolbarOverlayTooltip\n    design={{\"type\":\"dark\"}}\n    visible={visible}\n    setVisible={setVisible}\n    hostRef={hostRef}>\n    <ReactNative.View style={{\"height\":50,\"width\":300,\"backgroundColor\":\"red\"}}></ReactNative.View>\n  </ui_toolbar.ToolbarOverlayTooltip>);";
+        }()}>
         <ui_toolbar.Toolbar design={{"type":"dark"}}>
           <ui_text.ToggleAccent
             design={{"type":"dark"}}
@@ -38,7 +41,7 @@ function ToolbarOverlayTooltipDemo(){
           hostRef={hostRef}>
           <ReactNative.View style={{"height":50,"width":300,"backgroundColor":"red"}}></ReactNative.View>
         </ui_toolbar.ToolbarOverlayTooltip>
-      </n.Enclosed>
+      </n.EnclosedCodeContainer>
     </n.Isolation>);
 }
 
@@ -47,9 +50,12 @@ function ToolbarOverlayDemo(){
   let [visible,setVisible] = React.useState();
   return (
     <n.Isolation>
-      <n.Enclosed
+      <n.EnclosedCodeContainer
         label="melbourne.ui-toolbar/ToolbarOverlay"
-        style={{"height":100}}>
+        style={{"height":100}}
+        code={function (){
+          return "(\n  <ui_toolbar.Toolbar design={{\"type\":\"dark\"}}>\n    <ui_text.ToggleMinor\n      design={{\"type\":\"dark\"}}\n      variant={ui_toolbar.minorStandard()}\n      text=\"OVERLAY\"\n      selected={visible}\n      onPress={function (){\n        return setVisible(!visible);\n      }}>\n    </ui_text.ToggleMinor>\n  </ui_toolbar.Toolbar>);\n(\n  <ui_toolbar.ToolbarOverlay\n    design={{\"type\":\"dark\"}}\n    visible={visible}\n    setVisible={setVisible}>\n    <ReactNative.View style={{\"height\":50,\"width\":300,\"backgroundColor\":\"red\"}}></ReactNative.View>\n  </ui_toolbar.ToolbarOverlay>);";
+        }()}>
         <ui_toolbar.Toolbar design={{"type":"dark"}}>
           <ui_text.ToggleMinor
             design={{"type":"dark"}}
@@ -67,7 +73,7 @@ function ToolbarOverlayDemo(){
           setVisible={setVisible}>
           <ReactNative.View style={{"height":50,"width":300,"backgroundColor":"red"}}></ReactNative.View>
         </ui_toolbar.ToolbarOverlay>
-      </n.Enclosed>
+      </n.EnclosedCodeContainer>
     </n.Isolation>);
 }
 
@@ -75,7 +81,11 @@ function ToolbarOverlayDemo(){
 function ToolbarDemo(){
   let [value,setValue] = React.useState();
   return (
-    <n.Enclosed label="melbourne.ui-toolbar/Toolbar">
+    <n.EnclosedCodeContainer
+      label="melbourne.ui-toolbar/Toolbar"
+      code={function (){
+        return "(\n  <ui_toolbar.Toolbar design={{\"type\":\"dark\"}}>\n    <ReactNative.View style={{\"padding\":10}}>\n      <ui_text.TabsMinor\n        design={{\"type\":\"dark\"}}\n        variant={ui_toolbar.minorStandard()}\n        data={[\"ABC\",\"EFG\",\"HIJ\"]}\n        value={value}\n        setValue={setValue}>\n      </ui_text.TabsMinor>\n    </ReactNative.View>\n    <ReactNative.View style={{\"padding\":10}}>\n      <ui_text.TabsAccent\n        design={{\"type\":\"dark\"}}\n        variant={ui_toolbar.accentStandard()}\n        data={[\"ABC\",\"EFG\",\"HIJ\"]}\n        value={value}\n        setValue={setValue}>\n      </ui_text.TabsAccent>\n    </ReactNative.View>\n  </ui_toolbar.Toolbar>);\n(\n  <ui_toolbar.Toolbar design={{\"type\":\"dark\"}} noBanner={true}>\n    <ReactNative.View style={{\"padding\":10}}>\n      <ui_text.TabsMinor\n        design={{\"type\":\"dark\"}}\n        variant={ui_toolbar.minorNoBanner()}\n        data={[\"ABC\",\"EFG\",\"HIJ\"]}\n        value={value}\n        setValue={setValue}>\n      </ui_text.TabsMinor>\n    </ReactNative.View>\n    <ReactNative.View style={{\"padding\":10}}>\n      <ui_text.TabsAccent\n        design={{\"type\":\"dark\"}}\n        variant={ui_toolbar.accentNoBanner()}\n        data={[\"ABC\",\"EFG\",\"HIJ\"]}\n        value={value}\n        setValue={setValue}>\n      </ui_text.TabsAccent>\n    </ReactNative.View>\n  </ui_toolbar.Toolbar>);\n(\n  <n.TextDisplay value={value}></n.TextDisplay>);";
+      }()}>
       <ui_toolbar.Toolbar design={{"type":"dark"}}>
         <ReactNative.View style={{"padding":10}}>
           <ui_text.TabsMinor
@@ -117,7 +127,7 @@ function ToolbarDemo(){
         </ReactNative.View>
       </ui_toolbar.Toolbar>
       <n.TextDisplay value={value}></n.TextDisplay>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.ui-toolbar-test/ToolbarAnnexDemo [150] 
@@ -126,9 +136,12 @@ function ToolbarAnnexDemo(){
   let [mini,setMini] = React.useState(true);
   return (
     <n.Isolation>
-      <n.Enclosed
+      <n.EnclosedCodeContainer
         label="melbourne.ui-toolbar/ToolbarAnnex"
-        style={{"height":100}}>
+        style={{"height":100}}
+        code={function (){
+          return "(\n  <n.Row>\n    <ReactNative.Button\n      title=\"Open\"\n      onPress={function (){\n        return setVisible(true);\n      }}>\n    </ReactNative.Button>\n    <ReactNative.Button\n      title={\"Mini \" + mini}\n      onPress={function (){\n        return setMini(!mini);\n      }}>\n    </ReactNative.Button>\n  </n.Row>);\n(\n  <ui_toolbar.ToolbarAnnex\n    component={function ({onClose}){\n      return (\n        <n.Row>\n          <ReactNative.View style={{\"height\":50,\"width\":300,\"backgroundColor\":\"red\"}}>\n            <ReactNative.Button title=\"Close\" onPress={onClose}></ReactNative.Button>\n          </ReactNative.View>\n        </n.Row>);\n    }}\n    mini={mini}\n    design={{\"type\":\"dark\"}}\n    visible={visible}\n    setVisible={setVisible}>\n  </ui_toolbar.ToolbarAnnex>);";
+        }()}>
         <n.Row>
           <ReactNative.Button
             title="Open"
@@ -157,7 +170,7 @@ function ToolbarAnnexDemo(){
           visible={visible}
           setVisible={setVisible}>
         </ui_toolbar.ToolbarAnnex>
-      </n.Enclosed>
+      </n.EnclosedCodeContainer>
     </n.Isolation>);
 }
 

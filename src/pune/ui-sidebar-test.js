@@ -14,7 +14,11 @@ import ui_section from '../melbourne/ui-section'
 function SidebarMenuDemo(){
   let [sectionKey,setSectionKey] = React.useState();
   return (
-    <n.Enclosed label="pune.ui-sidebar/SidebarMenu">
+    <n.EnclosedCodeContainer
+      label="pune.ui-sidebar/SidebarMenu"
+      code={function (){
+        return "(\n  <ui_section.SectionBase design={{\"type\":\"dark\"}}>\n    <ui_sidebar.SidebarMenu\n      design={{\"type\":\"dark\"}}\n      sections={[\"A\",\"B\",\"C\"]}\n      setSectionKey={setSectionKey}\n      sectionKey={sectionKey}>\n    </ui_sidebar.SidebarMenu>\n  </ui_section.SectionBase>);";
+      }()}>
       <ui_section.SectionBase design={{"type":"dark"}}>
         <ui_sidebar.SidebarMenu
           design={{"type":"dark"}}
@@ -23,14 +27,18 @@ function SidebarMenuDemo(){
           sectionKey={sectionKey}>
         </ui_sidebar.SidebarMenu>
       </ui_section.SectionBase>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // pune.ui-sidebar-test/SidebarDemo [38] 
 function SidebarDemo(){
   let [sectionKey,setSectionKey] = React.useState();
   return (
-    <n.Enclosed label="pune.ui-sidebar/Sidebar">
+    <n.EnclosedCodeContainer
+      label="pune.ui-sidebar/Sidebar"
+      code={function (){
+        return "(\n  <ui_section.SectionBase design={{\"type\":\"dark\"}}>\n    <ui_sidebar.Sidebar\n      design={{\"type\":\"dark\"}}\n      sections={[\"A\",\"B\",\"C\"]}\n      setSectionKey={setSectionKey}\n      sectionKey={sectionKey}>\n    </ui_sidebar.Sidebar>\n  </ui_section.SectionBase>);";
+      }()}>
       <ui_section.SectionBase design={{"type":"dark"}}>
         <ui_sidebar.Sidebar
           design={{"type":"dark"}}
@@ -39,7 +47,7 @@ function SidebarDemo(){
           sectionKey={sectionKey}>
         </ui_sidebar.Sidebar>
       </ui_section.SectionBase>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {"SidebarMenuDemo":SidebarMenuDemo,"SidebarDemo":SidebarDemo};

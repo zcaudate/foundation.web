@@ -34,13 +34,16 @@ var CHART = {
 // pune.ui-depthchart-test/MarketDepthChartDemo [65] 
 function MarketDepthChartDemo(){
   return (
-    <n.Enclosed
+    <n.EnclosedCodeContainer
       label="pune.ui-depthchart/MarketDepthChart"
-      style={{"height":500}}>
+      style={{"height":500}}
+      code={function (){
+        return "React.createElement(depthchart.MarketDepthChart,CHART);\n(\n  <ReactNative.View style={{\"height\":10}}></ReactNative.View>);\nReact.createElement(n.TextDisplay,CHART);";
+      }()}>
       {React.createElement(depthchart.MarketDepthChart,CHART)}
       <ReactNative.View style={{"height":10}}></ReactNative.View>
       {React.createElement(n.TextDisplay,CHART)}
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {"CHART":CHART,"MarketDepthChartDemo":MarketDepthChartDemo};

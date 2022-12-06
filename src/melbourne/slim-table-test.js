@@ -70,7 +70,11 @@ function TableModifyViewDemo(){
   let components = {};
   return (
     <n.Isolation>
-      <n.Enclosed label="melbourne.slim-table/TableModifyView">
+      <n.EnclosedCodeContainer
+        label="melbourne.slim-table/TableModifyView"
+        code={function (){
+          return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_table.TableModifyView\n        design={{\"type\":\"light\"}}\n        mini={true}\n        display={{\"modify\":impl}}\n        form={form}\n        actions={actions}\n        components={components}\n        control={control}\n        entry={entry}>\n      </slim_table.TableModifyView>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_table.TableModifyView\n        design={{\"type\":\"dark\"}}\n        mini={true}\n        display={{\"modify\":impl}}\n        form={form}\n        actions={actions}\n        components={components}\n        control={control}\n        entry={entry}>\n      </slim_table.TableModifyView>\n    </ui_static.Div>\n  </n.Row>);";
+        }()}>
         <n.Row>
           <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
             <slim_table.TableModifyView
@@ -97,7 +101,7 @@ function TableModifyViewDemo(){
             </slim_table.TableModifyView>
           </ui_static.Div>
         </n.Row>
-      </n.Enclosed>
+      </n.EnclosedCodeContainer>
     </n.Isolation>);
 }
 
@@ -136,7 +140,11 @@ function TableDetailViewDemo(){
   let components = {};
   return (
     <n.Isolation>
-      <n.Enclosed label="melbourne.slim-table/TableDetailView">
+      <n.EnclosedCodeContainer
+        label="melbourne.slim-table/TableDetailView"
+        code={function (){
+          return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}}>\n      <slim_table.TableDetailView\n        design={{\"type\":\"light\"}}\n        style={{\"width\":200}}\n        display={{\"detail\":impl}}\n        components={components}\n        control={control}\n        entry={entry}>\n      </slim_table.TableDetailView>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}}>\n      <slim_table.TableDetailView\n        design={{\"type\":\"dark\"}}\n        style={{\"width\":200}}\n        display={{\"detail\":impl}}\n        components={components}\n        control={control}\n        entry={entry}>\n      </slim_table.TableDetailView>\n    </ui_static.Div>\n  </n.Row>);";
+        }()}>
         <n.Row>
           <ui_static.Div design={{"type":"light"}}>
             <slim_table.TableDetailView
@@ -159,7 +167,7 @@ function TableDetailViewDemo(){
             </slim_table.TableDetailView>
           </ui_static.Div>
         </n.Row>
-      </n.Enclosed>
+      </n.EnclosedCodeContainer>
     </n.Isolation>);
 }
 
@@ -198,7 +206,11 @@ function TableCreateViewDemo(){
   let components = {};
   return (
     <n.Isolation>
-      <n.Enclosed label="melbourne.slim-table/TableCreateView">
+      <n.EnclosedCodeContainer
+        label="melbourne.slim-table/TableCreateView"
+        code={function (){
+          return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_table.TableCreateView\n        design={{\"type\":\"light\"}}\n        mini={true}\n        display={{\"create\":impl}}\n        form={form}\n        actions={actions}\n        components={components}\n        control={control}>\n      </slim_table.TableCreateView>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_table.TableCreateView\n        design={{\"type\":\"dark\"}}\n        mini={true}\n        display={{\"create\":impl}}\n        form={form}\n        actions={actions}\n        components={components}\n        control={control}>\n      </slim_table.TableCreateView>\n    </ui_static.Div>\n  </n.Row>);";
+        }()}>
         <n.Row>
           <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
             <slim_table.TableCreateView
@@ -223,7 +235,7 @@ function TableCreateViewDemo(){
             </slim_table.TableCreateView>
           </ui_static.Div>
         </n.Row>
-      </n.Enclosed>
+      </n.EnclosedCodeContainer>
     </n.Isolation>);
 }
 
@@ -343,7 +355,11 @@ function TableRouterViewDemo(){
   let components = {};
   return (
     <n.Isolation>
-      <n.Enclosed label="melbourne.slim-table/TableRouterView">
+      <n.EnclosedCodeContainer
+        label="melbourne.slim-table/TableRouterView"
+        code={function (){
+          return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_table.TableRouterView\n        design={{\"type\":\"light\"}}\n        mini={true}\n        routeKey={control.routeKey}\n        views={views}\n        actions={actions}\n        components={components}\n        control={control}\n        display={display}>\n      </slim_table.TableRouterView>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_table.TableRouterView\n        design={{\"type\":\"dark\"}}\n        mini={true}\n        routeKey={control.routeKey}\n        views={views}\n        actions={actions}\n        components={components}\n        control={control}\n        display={display}>\n      </slim_table.TableRouterView>\n    </ui_static.Div>\n  </n.Row>);";
+        }()}>
         <n.Row>
           <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
             <slim_table.TableRouterView
@@ -370,11 +386,11 @@ function TableRouterViewDemo(){
             </slim_table.TableRouterView>
           </ui_static.Div>
         </n.Row>
-      </n.Enclosed>
+      </n.EnclosedCodeContainer>
     </n.Isolation>);
 }
 
-// melbourne.slim-table-test/TableRouterDemo [289] 
+// melbourne.slim-table-test/TableRouterDemo [288] 
 function TableRouterDemo(){
   let views = React.useCallback({
     "list":ext_view.makeView({
@@ -444,7 +460,11 @@ function TableRouterDemo(){
   let {orderBy,routeKey,setOrderBy,setShowCreate,setShowDetail,setShowHeader,setShowList,setShowModify,showCreate,showDetail,showHeader,showList,showModify} = control;
   let design = {"type":"light"};
   return (
-    <n.Enclosed label="melbourne.slim-table/TableRouter">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-table/TableRouter"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_text.ToggleMinor\n      text=\"Header\"\n      selected={showHeader}\n      onPress={function (){\n        return setShowHeader(!showHeader);\n      }}\n      design={design}>\n    </ui_text.ToggleMinor>\n    <ui_text.ToggleMinor\n      text=\"Detail\"\n      selected={showDetail}\n      onPress={function (){\n        return setShowDetail(!showDetail);\n      }}\n      design={design}>\n    </ui_text.ToggleMinor>\n    <ui_text.ToggleMinor\n      text=\"Modify\"\n      selected={showModify}\n      onPress={function (){\n        return setShowModify(!showModify);\n      }}\n      design={design}>\n    </ui_text.ToggleMinor>\n    <ui_text.ToggleMinor\n      text=\"Create\"\n      selected={showCreate}\n      onPress={function (){\n        return setShowCreate(!showCreate);\n      }}\n      design={design}>\n    </ui_text.ToggleMinor>\n    <ui_text.ToggleMinor\n      text=\"List\"\n      selected={showList}\n      onPress={function (){\n        return setShowList(!showList);\n      }}\n      design={design}>\n    </ui_text.ToggleMinor>\n  </n.Row>);\n(\n  <n.Row>\n    <slim_table.TableRouter\n      design={{\"type\":\"light\"}}\n      mini={true}\n      display={{\n        \"detail\":{\n          \"type\":\"card\",\n          \"header\":{\"main\":{\"type\":\"title\",\"template\":[\"currency_id\"]}},\n          \"body\":{\n            \"title\":{\"type\":\"title\",\"template\":[\"currency_id\"]},\n            \"main\":{\n              \"type\":\"v\",\n              \"body\":[\n                {\n                \"type\":\"pair\",\n                \"title\":{\"template\":\"B\"},\n                \"text\":{\"template\":[\"balance\"]}\n              },\n                {\n                \"type\":\"pair\",\n                \"title\":{\"template\":\"E\"},\n                \"text\":{\"template\":[\"escrow\"]}\n              }\n              ]\n            },\n            \"avatar\":{\n              \"type\":\"image\",\n              \"text\":{\"template\":[\"currency_id\"]},\n              \"image\":{\"template\":[\"picture\"]}\n            }\n          }\n        }\n      }}\n      views={views}\n      components={components}\n      control={control}>\n    </slim_table.TableRouter>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_text.ToggleMinor
           text="Header"
@@ -525,10 +545,10 @@ function TableRouterDemo(){
           control={control}>
         </slim_table.TableRouter>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
-// melbourne.slim-table-test/TableDemo [408] 
+// melbourne.slim-table-test/TableDemo [407] 
 function TableDemo(){
   let views = React.useCallback({
     "list":ext_view.makeView({
@@ -582,7 +602,11 @@ function TableDemo(){
   let {orderBy,routeKey,setOrderBy,setShowCreate,setShowDetail,setShowHeader,setShowList,setShowModify,showCreate,showDetail,showHeader,showList,showModify} = control;
   let design = {"type":"light"};
   return (
-    <n.Enclosed label="melbourne.slim-table/Table">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-table/Table"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_text.ToggleMinor\n      text=\"Create\"\n      selected={showCreate}\n      onPress={function (){\n        return setShowCreate(!showCreate);\n      }}\n      design={design}>\n    </ui_text.ToggleMinor>\n    <ui_text.ToggleMinor\n      text=\"List\"\n      selected={showList}\n      onPress={function (){\n        return setShowList(!showList);\n      }}\n      design={design}>\n    </ui_text.ToggleMinor>\n  </n.Row>);\n(\n  <n.Row>\n    <slim_table.Table\n      design={{\"type\":\"light\"}}\n      display={{\"create\":{\"type\":\"fold\"}}}\n      views={views}\n      components={components}\n      control={control}>\n    </slim_table.Table>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_text.ToggleMinor
           text="Create"
@@ -610,10 +634,10 @@ function TableDemo(){
           control={control}>
         </slim_table.Table>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
-// melbourne.slim-table-test/TableStandardDemo [483] 
+// melbourne.slim-table-test/TableStandardDemo [482] 
 function TableStandardDemo(){
   let views = React.useCallback({
     "list":ext_view.makeView({
@@ -667,7 +691,11 @@ function TableStandardDemo(){
   let {orderBy,routeKey,setOrderBy,setShowCreate,setShowDetail,setShowHeader,setShowList,setShowModify,showCreate,showDetail,showHeader,showList,showModify} = control;
   let design = {"type":"light"};
   return (
-    <n.Enclosed label="melbourne.slim-table/TableStandard">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-table/TableStandard"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_text.ToggleMinor\n      text=\"Create\"\n      selected={showCreate}\n      onPress={function (){\n        return setShowCreate(!showCreate);\n      }}\n      design={design}>\n    </ui_text.ToggleMinor>\n    <ui_text.ToggleMinor\n      text=\"List\"\n      selected={showList}\n      onPress={function (){\n        return setShowList(!showList);\n      }}\n      design={design}>\n    </ui_text.ToggleMinor>\n  </n.Row>);\n(\n  <n.Row>\n    <slim_table.TableStandard\n      design={{\"type\":\"light\"}}\n      display={{\"create\":{\"type\":\"fold\"}}}\n      views={views}\n      components={components}\n      control={control}>\n    </slim_table.TableStandard>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_text.ToggleMinor
           text="Create"
@@ -695,10 +723,10 @@ function TableStandardDemo(){
           control={control}>
         </slim_table.TableStandard>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
-// melbourne.slim-table-test/TableEmbeddedDemo [558] 
+// melbourne.slim-table-test/TableEmbeddedDemo [557] 
 function TableEmbeddedDemo(){
   let views = React.useCallback({
     "list":ext_view.makeView({
@@ -752,7 +780,11 @@ function TableEmbeddedDemo(){
   let {orderBy,routeKey,setOrderBy,setShowCreate,setShowDetail,setShowHeader,setShowList,setShowModify,showCreate,showDetail,showHeader,showList,showModify} = control;
   let design = {"type":"light"};
   return (
-    <n.Enclosed label="melbourne.slim-table/TableEmbedded">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-table/TableEmbedded"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_text.ToggleMinor\n      text=\"Create\"\n      selected={showCreate}\n      onPress={function (){\n        return setShowCreate(!showCreate);\n      }}\n      design={design}>\n    </ui_text.ToggleMinor>\n    <ui_text.ToggleMinor\n      text=\"List\"\n      selected={showList}\n      onPress={function (){\n        return setShowList(!showList);\n      }}\n      design={design}>\n    </ui_text.ToggleMinor>\n  </n.Row>);\n(\n  <n.Row>\n    <slim_table.TableEmbedded\n      design={{\"type\":\"light\"}}\n      display={{\"create\":{\"type\":\"fold\"}}}\n      views={views}\n      components={components}\n      control={control}>\n    </slim_table.TableEmbedded>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_text.ToggleMinor
           text="Create"
@@ -780,7 +812,7 @@ function TableEmbeddedDemo(){
           control={control}>
         </slim_table.TableEmbedded>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {

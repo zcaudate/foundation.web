@@ -10,7 +10,11 @@ import ui_stepper from './ui-stepper'
 function StepperTabsDemo(){
   let [index,setIndex] = React.useState(0);
   return (
-    <n.Enclosed label="melbourne.ui-stepper/StepperTabs">
+    <n.EnclosedCodeContainer
+      label="melbourne.ui-stepper/StepperTabs"
+      code={function (){
+        return "(\n  <n.Row>\n    <n.Row style={{\"backgroundColor\":\"#eee\",\"flex\":1,\"padding\":30}}>\n      <ui_stepper.StepperTabs\n        brand={{\"type\":\"light\"}}\n        total={5}\n        itemProps={[{},{}]}\n        index={index}\n        setIndex={setIndex}>\n      </ui_stepper.StepperTabs>\n    </n.Row>\n    <n.Row style={{\"backgroundColor\":\"#333\",\"flex\":1,\"padding\":30}}>\n      <ui_stepper.StepperTabs\n        brand={{\"type\":\"dark\"}}\n        total={5}\n        itemProps={[{},{}]}\n        index={index}\n        setIndex={setIndex}>\n      </ui_stepper.StepperTabs>\n    </n.Row>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <n.Row style={{"backgroundColor":"#eee","flex":1,"padding":30}}>
           <ui_stepper.StepperTabs
@@ -31,7 +35,7 @@ function StepperTabsDemo(){
           </ui_stepper.StepperTabs>
         </n.Row>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.ui-stepper-test/StepperDemo [58] 
@@ -40,7 +44,11 @@ function StepperDemo(){
     return 0;
   });
   return (
-    <n.Enclosed label="melbourne.ui-stepper/Stepper">
+    <n.EnclosedCodeContainer
+      label="melbourne.ui-stepper/Stepper"
+      code={function (){
+        return "(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"flex\":1,\"padding\":30}}>\n      <ui_stepper.StepperTabs\n        brand={{\"type\":\"light\"}}\n        total={4}\n        itemProps={[{},{}]}\n        index={index}\n        setIndex={setIndex}>\n      </ui_stepper.StepperTabs>\n      <ui_stepper.Stepper\n        style={{\"height\":200,\"width\":200}}\n        pageStyle={{\"height\":200,\"width\":200}}\n        pages={[\n          (\n          <ReactNative.View style={{\"flex\":1,\"backgroundColor\":\"blue\"}}>\n            <ReactNative.Button\n              title=\"PRESS 1\"\n              onPress={function (){\n                return alert(\"1\");\n              }}>\n            </ReactNative.Button>\n          </ReactNative.View>),\n          (\n          <ReactNative.View style={{\"flex\":1,\"backgroundColor\":\"red\"}}>\n            <ReactNative.Button\n              title=\"PRESS 2\"\n              onPress={function (){\n                return alert(\"2\");\n              }}>\n            </ReactNative.Button>\n          </ReactNative.View>),\n          (\n          <ReactNative.View style={{\"flex\":1,\"backgroundColor\":\"yellow\"}}>\n            <ReactNative.Button\n              title=\"PRESS 3\"\n              onPress={function (){\n                return alert(\"3\");\n              }}>\n            </ReactNative.Button>\n          </ReactNative.View>),\n          (\n          <ReactNative.View style={{\"flex\":1,\"backgroundColor\":\"green\"}}>\n            <ReactNative.Button\n              title=\"PRESS 4\"\n              onPress={function (){\n                return alert(\"4\");\n              }}>\n            </ReactNative.Button>\n          </ReactNative.View>)\n        ]}\n        index={index}\n        setIndex={setIndex}>\n      </ui_stepper.Stepper>\n    </ReactNative.View>\n    <n.Row style={{\"backgroundColor\":\"#333\",\"flex\":1,\"padding\":30}}></n.Row>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ReactNative.View style={{"backgroundColor":"#eee","flex":1,"padding":30}}>
           <ui_stepper.StepperTabs
@@ -97,7 +105,7 @@ function StepperDemo(){
         </ReactNative.View>
         <n.Row style={{"backgroundColor":"#333","flex":1,"padding":30}}></n.Row>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {"StepperTabsDemo":StepperTabsDemo,"StepperDemo":StepperDemo};

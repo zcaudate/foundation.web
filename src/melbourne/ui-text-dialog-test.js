@@ -15,7 +15,11 @@ import ui_section from './ui-section'
 // melbourne.ui-text-dialog-test/ConfirmDialogDemo [23] 
 function ConfirmDialogDemo(){
   return (
-    <n.Enclosed label="melbourne.ui-text-dialog/ConfirmDialog">
+    <n.EnclosedCodeContainer
+      label="melbourne.ui-text-dialog/ConfirmDialog"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_section.SectionBase design={{\"type\":\"light\"}}>\n      <n.Row>\n        <ui_text_dialog.ConfirmDialog\n          design={{\"type\":\"light\"}}\n          text=\"Press\"\n          onPress={function (){\n            return alert(\"HELLO\");\n          }}>\n        </ui_text_dialog.ConfirmDialog>\n        <ui_text_dialog.ConfirmDialog\n          design={{\"type\":\"light\"}}\n          component=\"accent\"\n          text=\"Press\"\n          onPress={function (){\n            return alert(\"HELLO\");\n          }}>\n        </ui_text_dialog.ConfirmDialog>\n      </n.Row>\n    </ui_section.SectionBase>\n    <ui_section.SectionBase design={{\"type\":\"dark\"}}>\n      <n.Row>\n        <ui_text_dialog.ConfirmDialog\n          design={{\"type\":\"dark\"}}\n          text=\"Press\"\n          onPress={function (){\n            return alert(\"HELLO\");\n          }}>\n        </ui_text_dialog.ConfirmDialog>\n        <ui_text_dialog.ConfirmDialog\n          design={{\"type\":\"dark\"}}\n          component=\"accent\"\n          text=\"Press\"\n          onPress={function (){\n            return alert(\"HELLO\");\n          }}>\n        </ui_text_dialog.ConfirmDialog>\n      </n.Row>\n    </ui_section.SectionBase>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_section.SectionBase design={{"type":"light"}}>
           <n.Row>
@@ -56,7 +60,7 @@ function ConfirmDialogDemo(){
           </n.Row>
         </ui_section.SectionBase>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {"ConfirmDialogDemo":ConfirmDialogDemo};

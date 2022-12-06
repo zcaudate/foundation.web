@@ -22,7 +22,11 @@ import ui_static from './ui-static'
 function EntryFreeDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryFree">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryFree"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryFree\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        impl={{\n          \"key\":\"title\",\n          \"component\":slim_entry.EntryContentTitle,\n          \"template\":[\"currency_id\"]\n        }}\n        custom={{\"title\":{\"style\":{\"padding\":10}}}}>\n      </slim_entry.EntryFree>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        impl={{\n          \"type\":\"free\",\n          \"key\":\"title\",\n          \"component\":slim_entry.EntryContentParagraph,\n          \"template\":[\"currency_id\"]\n        }}\n        custom={{\"title\":{\"style\":{\"padding\":10}}}}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryFree
@@ -50,14 +54,18 @@ function EntryFreeDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentRawDemo [64] 
 function EntryContentRawDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentRaw">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentRaw"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryContentRaw design={{\"type\":\"light\"}} entry={entry}></slim_entry.EntryContentRaw>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry design={{\"type\":\"dark\"}} impl={{\"type\":\"raw\"}} entry={entry}></slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryContentRaw design={{"type":"light"}} entry={entry}></slim_entry.EntryContentRaw>
@@ -66,7 +74,7 @@ function EntryContentRawDemo(){
           <slim_entry.Entry design={{"type":"dark"}} impl={{"type":"raw"}} entry={entry}></slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentRawFormDemo [91] 
@@ -75,7 +83,11 @@ function EntryContentRawFormDemo(){
     return {"currency_id":"STATS","balance":1000,"escrow":50.5};
   },{});
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentRawForm">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentRawForm"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryContentRawForm design={{\"type\":\"light\"}} form={form}></slim_entry.EntryContentRawForm>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        impl={{\"type\":\"raw_form\"}}\n        form={form}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryContentRawForm design={{"type":"light"}} form={form}></slim_entry.EntryContentRawForm>
@@ -88,14 +100,18 @@ function EntryContentRawFormDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentFillDemo [120] 
 function EntryContentFillDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentFill">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentFill"
+      code={function (){
+        return "(\n  <n.Row style={{\"height\":30}}>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryContentFill design={{\"type\":\"light\"}} entry={entry}></slim_entry.EntryContentFill>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry design={{\"type\":\"dark\"}} impl={{\"type\":\"fill\"}} entry={entry}></slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row style={{"height":30}}>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryContentFill design={{"type":"light"}} entry={entry}></slim_entry.EntryContentFill>
@@ -104,14 +120,18 @@ function EntryContentFillDemo(){
           <slim_entry.Entry design={{"type":"dark"}} impl={{"type":"fill"}} entry={entry}></slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryLayoutHorizontalDemo [151] 
 function EntryLayoutHorizontalDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryLayoutHorizontal">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryLayoutHorizontal"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryLayoutHorizontal\n        design={{\"type\":\"light\"}}\n        impl={{\n          \"body\":[\n            (\n            <slim_entry.EntryContentTitle\n              key=\"title\"\n              design={{\"type\":\"light\"}}\n              entry={entry}\n              impl={{\"key\":\"title\",\"template\":[\"currency_id\"]}}\n              custom={{\"title\":{\"style\":{\"padding\":10}}}}>\n            </slim_entry.EntryContentTitle>),\n            (\n            <slim_entry.EntryContentParagraph\n              key=\"body\"\n              design={{\"type\":\"light\"}}\n              entry={entry}\n              impl={{\"key\":\"body\",\"template\":[\"balance\"]}}\n              custom={{\"body\":{\"style\":{\"padding\":10}}}}>\n            </slim_entry.EntryContentParagraph>)\n          ]\n        }}>\n      </slim_entry.EntryLayoutHorizontal>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        custom={{\n          \"title\":{\"style\":{\"padding\":10}},\n          \"body\":{\"style\":{\"padding\":10}}\n        }}\n        entry={entry}\n        impl={{\n          \"type\":\"h\",\n          \"body\":[\n            {\"type\":\"title\",\"key\":\"title\",\"template\":[\"currency_id\"]},\n            {\"type\":\"p\",\"key\":\"body\",\"template\":[\"balance\"]}\n          ]\n        }}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryLayoutHorizontal
@@ -156,14 +176,18 @@ function EntryLayoutHorizontalDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryLayoutVerticalDemo [199] 
 function EntryLayoutVerticalDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryLayoutVertical">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryLayoutVertical"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryLayoutVertical\n        design={{\"type\":\"light\"}}\n        impl={{\n          \"body\":[\n            (\n            <slim_entry.EntryContentTitle\n              key=\"title\"\n              design={{\"type\":\"light\"}}\n              entry={entry}\n              impl={{\"key\":\"title\",\"template\":[\"currency_id\"]}}\n              custom={{\"title\":{\"style\":{\"padding\":10}}}}>\n            </slim_entry.EntryContentTitle>),\n            (\n            <slim_entry.EntryContentParagraph\n              key=\"body\"\n              design={{\"type\":\"light\"}}\n              entry={entry}\n              impl={{\"key\":\"body\",\"template\":[\"balance\"]}}\n              custom={{\"body\":{\"style\":{\"padding\":10}}}}>\n            </slim_entry.EntryContentParagraph>)\n          ]\n        }}>\n      </slim_entry.EntryLayoutVertical>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        custom={{\n          \"title\":{\"style\":{\"padding\":10}},\n          \"body\":{\"style\":{\"padding\":10}}\n        }}\n        entry={entry}\n        impl={{\n          \"type\":\"v\",\n          \"body\":[\n            {\"type\":\"title\",\"key\":\"title\",\"template\":[\"currency_id\"]},\n            {\"type\":\"p\",\"key\":\"body\",\"template\":[\"balance\"]}\n          ]\n        }}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryLayoutVertical
@@ -208,14 +232,18 @@ function EntryLayoutVerticalDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryLayoutEnclosedDemo [247] 
 function EntryLayoutEnclosedDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryLayoutEnclosed">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryLayoutEnclosed"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryLayoutEnclosed\n        design={{\"type\":\"light\"}}\n        impl={{\n          \"label\":\"ENCLOSED\",\n          \"body\":[\n            (\n            <slim_entry.EntryContentTitle\n              key=\"title\"\n              design={{\"type\":\"light\"}}\n              entry={entry}\n              impl={{\"key\":\"title\",\"template\":[\"currency_id\"]}}\n              custom={{\"title\":{\"style\":{\"padding\":10}}}}>\n            </slim_entry.EntryContentTitle>),\n            (\n            <slim_entry.EntryContentParagraph\n              key=\"body\"\n              design={{\"type\":\"light\"}}\n              entry={entry}\n              impl={{\"key\":\"body\",\"template\":[\"balance\"]}}\n              custom={{\"body\":{\"style\":{\"padding\":10}}}}>\n            </slim_entry.EntryContentParagraph>)\n          ]\n        }}>\n      </slim_entry.EntryLayoutEnclosed>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        custom={{\n          \"title\":{\"style\":{\"padding\":10}},\n          \"body\":{\"style\":{\"padding\":10}}\n        }}\n        entry={entry}\n        impl={{\n          \"type\":\"enclosed\",\n          \"label\":\"ENCLOSED\",\n          \"body\":[\n            {\"type\":\"title\",\"key\":\"title\",\"template\":[\"currency_id\"]},\n            {\"type\":\"p\",\"key\":\"body\",\"template\":[\"balance\"]}\n          ]\n        }}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryLayoutEnclosed
@@ -262,14 +290,18 @@ function EntryLayoutEnclosedDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryLayoutPortalDemo [298] 
 function EntryLayoutPortalDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryLayoutPortal">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryLayoutPortal"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <n.PortalSink name=\"light\"></n.PortalSink>\n      <slim_entry.EntryLayoutPortal\n        design={{\"type\":\"light\"}}\n        impl={{\n          \"target\":\"light\",\n          \"body\":[\n            (\n            <slim_entry.EntryContentTitle\n              key=\"title\"\n              design={{\"type\":\"light\"}}\n              entry={entry}\n              impl={{\"key\":\"title\",\"template\":[\"currency_id\"]}}\n              custom={{\"title\":{\"style\":{\"padding\":10}}}}>\n            </slim_entry.EntryContentTitle>),\n            (\n            <slim_entry.EntryContentParagraph\n              key=\"body\"\n              design={{\"type\":\"light\"}}\n              entry={entry}\n              impl={{\"key\":\"body\",\"template\":[\"balance\"]}}\n              custom={{\"body\":{\"style\":{\"padding\":10}}}}>\n            </slim_entry.EntryContentParagraph>)\n          ]\n        }}>\n      </slim_entry.EntryLayoutPortal>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <n.PortalSink name=\"dark\"></n.PortalSink>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        custom={{\n          \"title\":{\"style\":{\"padding\":10}},\n          \"body\":{\"style\":{\"padding\":10}}\n        }}\n        entry={entry}\n        impl={{\n          \"type\":\"portal\",\n          \"target\":\"dark\",\n          \"body\":[\n            {\"type\":\"title\",\"key\":\"title\",\"template\":[\"currency_id\"]},\n            {\"type\":\"p\",\"key\":\"body\",\"template\":[\"balance\"]}\n          ]\n        }}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <n.PortalSink name="light"></n.PortalSink>
@@ -318,14 +350,18 @@ function EntryLayoutPortalDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryLayoutPortalSinkDemo [353] 
 function EntryLayoutPortalSinkDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryLayoutPortalSink">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryLayoutPortalSink"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryLayoutPortalSink design={{\"type\":\"light\"}} impl={{\"name\":\"hello_light\"}}></slim_entry.EntryLayoutPortalSink>\n      <slim_entry.EntryLayoutPortal\n        design={{\"type\":\"light\"}}\n        impl={{\n          \"target\":\"hello_light\",\n          \"body\":[\n            (\n            <slim_entry.EntryContentTitle\n              key=\"title\"\n              design={{\"type\":\"light\"}}\n              entry={entry}\n              impl={{\"key\":\"title\",\"template\":[\"currency_id\"]}}\n              custom={{\"title\":{\"style\":{\"padding\":10}}}}>\n            </slim_entry.EntryContentTitle>),\n            (\n            <slim_entry.EntryContentParagraph\n              key=\"body\"\n              design={{\"type\":\"light\"}}\n              entry={entry}\n              impl={{\"key\":\"body\",\"template\":[\"balance\"]}}\n              custom={{\"body\":{\"style\":{\"padding\":10}}}}>\n            </slim_entry.EntryContentParagraph>)\n          ]\n        }}>\n      </slim_entry.EntryLayoutPortal>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        custom={{\n          \"title\":{\"style\":{\"padding\":10}},\n          \"body\":{\"style\":{\"padding\":10}}\n        }}\n        entry={entry}\n        impl={{\"type\":\"portal_sink\",\"name\":\"hello_dark\"}}>\n      </slim_entry.Entry>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        custom={{\n          \"title\":{\"style\":{\"padding\":10}},\n          \"body\":{\"style\":{\"padding\":10}}\n        }}\n        entry={entry}\n        impl={{\n          \"type\":\"portal\",\n          \"target\":\"hello_dark\",\n          \"body\":[\n            {\"type\":\"title\",\"key\":\"title\",\"template\":[\"currency_id\"]},\n            {\"type\":\"p\",\"key\":\"body\",\"template\":[\"balance\"]}\n          ]\n        }}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryLayoutPortalSink design={{"type":"light"}} impl={{"name":"hello_light"}}></slim_entry.EntryLayoutPortalSink>
@@ -382,14 +418,18 @@ function EntryLayoutPortalSinkDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentScrollDemo [414] 
 function EntryContentScrollDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentScroll">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentScroll"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1,\"padding\":10}}>\n      <slim_entry.EntryLayoutScroll design={{\"type\":\"light\"}} entry={entry} impl={{\"key\":\"body\"}}></slim_entry.EntryLayoutScroll>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1,\"padding\":10}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        impl={{\"type\":\"scroll\"}}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1,"padding":10}}>
           <slim_entry.EntryLayoutScroll design={{"type":"light"}} entry={entry} impl={{"key":"body"}}></slim_entry.EntryLayoutScroll>
@@ -402,7 +442,7 @@ function EntryContentScrollDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryLayoutPopupDemo [444] 
@@ -410,7 +450,11 @@ function EntryLayoutPopupDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
     <n.Isolation>
-      <n.Enclosed label="melbourne.slim-entry/EntryLayoutPopup">
+      <n.EnclosedCodeContainer
+        label="melbourne.slim-entry/EntryLayoutPopup"
+        code={function (){
+          return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1,\"padding\":10}}></ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1,\"padding\":10}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        actions={{\n          \"hello\":function (){\n            return alert(\"HELLO\");\n          }\n        }}\n        impl={{\n          \"type\":\"popup\",\n          \"text\":\"HELLO\",\n          \"body\":[\n            {\n            \"type\":\"v\",\n            \"style\":{\"height\":100,\"width\":100},\n            \"body\":[\n              {\"template\":\"hello world\"},\n              {\"type\":\"action\",\"text\":\"HELLO\",\"submit\":\"hello\"}\n            ]\n          }\n          ]\n        }}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+        }()}>
         <n.Row>
           <ui_static.Div design={{"type":"light"}} style={{"flex":1,"padding":10}}></ui_static.Div>
           <ui_static.Div design={{"type":"dark"}} style={{"flex":1,"padding":10}}>
@@ -439,7 +483,7 @@ function EntryLayoutPopupDemo(){
             </slim_entry.Entry>
           </ui_static.Div>
         </n.Row>
-      </n.Enclosed>
+      </n.EnclosedCodeContainer>
     </n.Isolation>);
 }
 
@@ -447,7 +491,11 @@ function EntryLayoutPopupDemo(){
 function EntryLayoutDebugDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryLayoutDebug">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryLayoutDebug"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1,\"padding\":10}}>\n      <slim_entry.EntryLayoutDebug\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        impl={{\n          \"key\":\"body\",\n          \"body\":[\n            (\n            <ReactNative.Text key=\"name\">Hello World</ReactNative.Text>)\n          ]\n        }}>\n      </slim_entry.EntryLayoutDebug>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1,\"padding\":10}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        impl={{\"type\":\"debug\",\"body\":[{\"template\":\"hellp world\"}]}}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1,"padding":10}}>
           <slim_entry.EntryLayoutDebug
@@ -470,14 +518,18 @@ function EntryLayoutDebugDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentSeparatorDemo [519] 
 function EntryContentSeparatorDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentSeparator">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentSeparator"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1,\"padding\":10}}>\n      <slim_entry.EntryContentSeparator design={{\"type\":\"light\"}} entry={entry} impl={{\"key\":\"body\"}}></slim_entry.EntryContentSeparator>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1,\"padding\":10}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        impl={{\"type\":\"separator\"}}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1,"padding":10}}>
           <slim_entry.EntryContentSeparator design={{"type":"light"}} entry={entry} impl={{"key":"body"}}></slim_entry.EntryContentSeparator>
@@ -490,14 +542,18 @@ function EntryContentSeparatorDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentTitleH1Demo [552] 
 function EntryContentTitleH1Demo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentTitleH1">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentTitleH1"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryContentTitleH1\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        impl={{\"key\":\"title_h1\",\"template\":[\"currency_id\"]}}\n        custom={{\"title\":{\"style\":{\"padding\":10}}}}>\n      </slim_entry.EntryContentTitleH1>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        impl={{\"type\":\"title_h1\",\"key\":\"title\",\"template\":[\"currency_id\"]}}\n        custom={{\"title\":{\"style\":{\"padding\":10}}}}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryContentTitleH1
@@ -516,14 +572,18 @@ function EntryContentTitleH1Demo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentTitleH2Demo [585] 
 function EntryContentTitleH2Demo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentTitleH2">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentTitleH2"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryContentTitleH2\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        impl={{\"key\":\"title_h2\",\"template\":[\"currency_id\"]}}\n        custom={{\"title\":{\"style\":{\"padding\":10}}}}>\n      </slim_entry.EntryContentTitleH2>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        impl={{\"type\":\"title_h2\",\"key\":\"title\",\"template\":[\"currency_id\"]}}\n        custom={{\"title\":{\"style\":{\"padding\":10}}}}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryContentTitleH2
@@ -542,14 +602,18 @@ function EntryContentTitleH2Demo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentTitleH3Demo [618] 
 function EntryContentTitleH3Demo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentTitleH3">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentTitleH3"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryContentTitleH3\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        impl={{\"key\":\"title_h3\",\"template\":[\"currency_id\"]}}\n        custom={{\"title\":{\"style\":{\"padding\":10}}}}>\n      </slim_entry.EntryContentTitleH3>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        impl={{\"type\":\"title_h3\",\"key\":\"title\",\"template\":[\"currency_id\"]}}\n        custom={{\"title\":{\"style\":{\"padding\":10}}}}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryContentTitleH3
@@ -568,14 +632,18 @@ function EntryContentTitleH3Demo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentTitleH4Demo [651] 
 function EntryContentTitleH4Demo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentTitleH4">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentTitleH4"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryContentTitleH4\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        impl={{\"key\":\"title_h4\",\"template\":[\"currency_id\"]}}\n        custom={{\"title\":{\"style\":{\"padding\":10}}}}>\n      </slim_entry.EntryContentTitleH4>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        impl={{\"type\":\"title_h4\",\"key\":\"title\",\"template\":[\"currency_id\"]}}\n        custom={{\"title\":{\"style\":{\"padding\":10}}}}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryContentTitleH4
@@ -594,14 +662,18 @@ function EntryContentTitleH4Demo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentTitleH5Demo [684] 
 function EntryContentTitleH5Demo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentTitleH5">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentTitleH5"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryContentTitleH5\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        impl={{\"key\":\"title_h5\",\"template\":[\"currency_id\"]}}\n        custom={{\"title\":{\"style\":{\"padding\":10}}}}>\n      </slim_entry.EntryContentTitleH5>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        impl={{\"type\":\"title_h5\",\"key\":\"title\",\"template\":[\"currency_id\"]}}\n        custom={{\"title\":{\"style\":{\"padding\":10}}}}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryContentTitleH5
@@ -620,14 +692,18 @@ function EntryContentTitleH5Demo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentTitleDemo [717] 
 function EntryContentTitleDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentTitle">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentTitle"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryContentTitle\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        impl={{\"key\":\"title\",\"template\":[\"currency_id\"]}}\n        custom={{\"title\":{\"style\":{\"padding\":10}}}}>\n      </slim_entry.EntryContentTitle>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        impl={{\"type\":\"title\",\"key\":\"title\",\"template\":[\"currency_id\"]}}\n        custom={{\"title\":{\"style\":{\"padding\":10}}}}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryContentTitle
@@ -646,14 +722,18 @@ function EntryContentTitleDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentBoldDemo [750] 
 function EntryContentBoldDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentBold">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentBold"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryContentBold\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        impl={{\"key\":\"bold_\",\"template\":[\"currency_id\"]}}\n        custom={{\"bold\":{\"style\":{\"padding\":10}}}}>\n      </slim_entry.EntryContentBold>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        impl={{\"type\":\"bold_\",\"key\":\"bold\",\"template\":[\"currency_id\"]}}\n        custom={{\"bold\":{\"style\":{\"padding\":10}}}}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryContentBold
@@ -672,14 +752,18 @@ function EntryContentBoldDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentParagraphDemo [783] 
 function EntryContentParagraphDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentParagraph">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentParagraph"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryContentParagraph\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        impl={{\"key\":\"body\",\"template\":[\"balance\"]}}\n        custom={{\"body\":{\"style\":{\"padding\":10}}}}>\n      </slim_entry.EntryContentParagraph>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        impl={{\"type\":\"p\",\"key\":\"body\",\"template\":[\"balance\"]}}\n        custom={{\"body\":{\"style\":{\"padding\":10}}}}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryContentParagraph
@@ -698,14 +782,18 @@ function EntryContentParagraphDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentIconDemo [816] 
 function EntryContentIconDemo(){
   let entry = {"name":"home"};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentIcon">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentIcon"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryContentIcon\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        impl={{\"key\":\"body\",\"template\":[\"name\"]}}\n        custom={{\"body\":{\"style\":{\"padding\":10}}}}>\n      </slim_entry.EntryContentIcon>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        impl={{\"type\":\"icon\",\"key\":\"body\",\"template\":[\"name\"]}}\n        custom={{\"body\":{\"style\":{\"padding\":10}}}}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryContentIcon
@@ -724,14 +812,18 @@ function EntryContentIconDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentImageDemo [847] 
 function EntryContentImageDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentImage">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentImage"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryContentImage\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        impl={{\n          \"text\":{\"template\":[\"currency_id\"]},\n          \"format\":function (arr){\n            return arr[0];\n          }\n        }}>\n      </slim_entry.EntryContentImage>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        impl={{\n          \"type\":\"image\",\n          \"text\":{\"template\":[\"currency_id\"]},\n          \"format\":function (arr){\n            return arr[0];\n          }\n        }}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryContentImage
@@ -759,14 +851,18 @@ function EntryContentImageDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentPairDemo [878] 
 function EntryContentPairDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentPair">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentPair"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryContentPair\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        impl={{\n          \"title\":{\"template\":\"currency: \"},\n          \"text\":{\"template\":[\"currency_id\"]}\n        }}>\n      </slim_entry.EntryContentPair>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        custom={{\"title\":{\"style\":{\"fontWeight\":\"900\"}}}}\n        impl={{\n          \"type\":\"pair\",\n          \"title\":{\n            \"type\":\"title\",\n            \"key\":\"title\",\n            \"template\":\"currency\",\n            \"format\":function (s){\n              return s.toUpperCase() + \": \";\n            }\n          },\n          \"text\":{\"template\":[\"currency_id\"]}\n        }}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryContentPair
@@ -798,7 +894,7 @@ function EntryContentPairDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentFieldDemo [913] 
@@ -812,7 +908,11 @@ function EntryContentFieldDemo(){
     };
   },{"currency":[],"currency1":[],"name":[],"about":[]});
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentField">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentField"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryContentField\n        design={{\"type\":\"light\"}}\n        form={form}\n        mini={true}\n        impl={{\"type\":\"field\",\"label\":\"Name\",\"field\":\"name\"}}>\n      </slim_entry.EntryContentField>\n      <slim_entry.EntryContentField\n        design={{\"type\":\"light\"}}\n        form={form}\n        mini={true}\n        impl={{\n          \"type\":\"field\",\n          \"field\":\"currency\",\n          \"component\":\"enum_multi\",\n          \"label\":\"Currency\",\n          \"options\":[\"XLM\",\"USD\",\"STATS\"]\n        }}>\n      </slim_entry.EntryContentField>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        form={form}\n        mini={true}\n        impl={{\n          \"type\":\"v\",\n          \"body\":[\n            {\"type\":\"field\",\"label\":\"Name\",\"field\":\"name\"},\n            {\n            \"type\":\"field\",\n            \"field\":\"currency\",\n            \"component\":\"enum_multi\",\n            \"label\":\"Currency\",\n            \"options\":[\"XLM\",\"USD\",\"STATS\"]\n          }\n          ]\n        }}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryContentField
@@ -855,7 +955,7 @@ function EntryContentFieldDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryLayoutFormFadeDemo [968] 
@@ -864,7 +964,11 @@ function EntryLayoutFormFadeDemo(){
     return {"visible":true};
   },{"visible":true});
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryLayoutFormFade">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryLayoutFormFade"
+      code={function (){
+        return "(\n  <n.Row>\n    <ReactNative.Button\n      title=\"T\"\n      onPress={function (){\n        return event_form.set_field(form,\"visible\",!event_form.get_field(form,\"visible\"));\n      }}>\n    </ReactNative.Button>\n  </n.Row>);\n(\n  <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n    <slim_entry.EntryLayoutFormFade\n      design={{\"type\":\"light\"}}\n      form={form}\n      mini={true}\n      impl={{\n        \"template\":[\"visible\"],\n        \"watch\":[\"visible\"],\n        \"body\":[\n          (\n          <ReactNative.View style={{\"height\":100,\"width\":100,\"backgroundColor\":\"red\"}}></ReactNative.View>)\n        ]\n      }}>\n    </slim_entry.EntryLayoutFormFade>\n  </ui_static.Div>);";
+      }()}>
       <n.Row>
         <ReactNative.Button
           title="T"
@@ -888,7 +992,7 @@ function EntryLayoutFormFadeDemo(){
           }}>
         </slim_entry.EntryLayoutFormFade>
       </ui_static.Div>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryLayoutFormFoldDemo [1002] 
@@ -897,7 +1001,11 @@ function EntryLayoutFormFoldDemo(){
     return {"visible":true};
   },{"visible":true});
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryLayoutFormFold">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryLayoutFormFold"
+      code={function (){
+        return "(\n  <n.Row>\n    <ReactNative.Button\n      title=\"T\"\n      onPress={function (){\n        return event_form.set_field(form,\"visible\",!event_form.get_field(form,\"visible\"));\n      }}>\n    </ReactNative.Button>\n  </n.Row>);\n(\n  <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n    <slim_entry.EntryLayoutFormFold\n      design={{\"type\":\"light\"}}\n      form={form}\n      mini={true}\n      impl={{\n        \"template\":[\"visible\"],\n        \"watch\":[\"visible\"],\n        \"body\":[\n          (\n          <ReactNative.View style={{\"height\":100,\"width\":100,\"backgroundColor\":\"red\"}}></ReactNative.View>)\n        ]\n      }}>\n    </slim_entry.EntryLayoutFormFold>\n  </ui_static.Div>);";
+      }()}>
       <n.Row>
         <ReactNative.Button
           title="T"
@@ -921,7 +1029,7 @@ function EntryLayoutFormFoldDemo(){
           }}>
         </slim_entry.EntryLayoutFormFold>
       </ui_static.Div>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentControlDemo [1048] 
@@ -933,7 +1041,11 @@ function EntryContentControlDemo(){
     "escrow":50.5
   };
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentControl">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentControl"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryContentControl\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        custom={{\"hello\":{\"text\":\"Hello\"}}}\n        control={{\n          \"setShowDetail\":function (e){\n            return alert(JSON.stringify(e));\n          }\n        }}\n        impl={{\"key\":\"hello\",\"submit\":\"detail\"}}>\n      </slim_entry.EntryContentControl>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        custom={{\"hello\":{\"text\":\"Hello\"}}}\n        control={{\n          \"setShowDetail\":function (e){\n            return alert(JSON.stringify(e));\n          }\n        }}\n        impl={{\"type\":\"control\",\"key\":\"hello\",\"submit\":\"detail\"}}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryContentControl
@@ -962,7 +1074,7 @@ function EntryContentControlDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryLayoutControlDemo [1084] 
@@ -974,7 +1086,11 @@ function EntryLayoutControlDemo(){
     "escrow":50.5
   };
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryLayoutControl">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryLayoutControl"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryLayoutControl\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        custom={{\"hello\":{\"text\":\"Hello\"}}}\n        control={{\n          \"setShowDetail\":function (e){\n            return alert(JSON.stringify(e));\n          }\n        }}\n        impl={{\n          \"key\":\"hello\",\n          \"submit\":\"detail\",\n          \"body\":[\n            (\n            <ReactNative.Text>PRESS</ReactNative.Text>)\n          ]\n        }}>\n      </slim_entry.EntryLayoutControl>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        custom={{\"hello\":{\"text\":\"Hello\"}}}\n        control={{\n          \"setShowDetail\":function (e){\n            return alert(JSON.stringify(e));\n          }\n        }}\n        impl={{\n          \"type\":\"control_layout\",\n          \"key\":\"hello\",\n          \"submit\":\"detail\",\n          \"body\":[{\"type\":\"raw\"}]\n        }}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryLayoutControl
@@ -1015,7 +1131,7 @@ function EntryLayoutControlDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentLinkDemo [1122] 
@@ -1024,7 +1140,11 @@ function EntryContentLinkDemo(){
   let url = ext_route.listenRouteUrl(route);
   let entry = {"a":1,"b":2};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentLink">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentLink"
+      code={function (){
+        return "(\n  <ReactNative.Text>{url}</ReactNative.Text>);\n(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryContentLink\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        route={route}\n        impl={{\"template\":\"hello/world/again\",\"text\":\"PRESS\"}}>\n      </slim_entry.EntryContentLink>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        route={route}\n        impl={{\"type\":\"link\",\"template\":\"hello/world\",\"text\":\"PRESS\"}}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <ReactNative.Text>{url}</ReactNative.Text>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
@@ -1044,7 +1164,7 @@ function EntryContentLinkDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryLayoutLinkDemo [1156] 
@@ -1053,7 +1173,11 @@ function EntryLayoutLinkDemo(){
   let url = ext_route.listenRouteUrl(route);
   let entry = {"a":1,"b":2};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryLayoutLink">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryLayoutLink"
+      code={function (){
+        return "(\n  <ReactNative.Text>{url}</ReactNative.Text>);\n(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryLayoutLink\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        route={route}\n        impl={{\n          \"template\":\"hello/world/again\",\n          \"body\":[\n            (\n            <ReactNative.Text>PRESS</ReactNative.Text>)\n          ]\n        }}>\n      </slim_entry.EntryLayoutLink>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        route={route}\n        impl={{\n          \"type\":\"link_layout\",\n          \"template\":\"hello/world\",\n          \"body\":[{\"type\":\"raw\"}]\n        }}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <ReactNative.Text>{url}</ReactNative.Text>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
@@ -1083,7 +1207,7 @@ function EntryLayoutLinkDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentRouteDemo [1190] 
@@ -1095,12 +1219,16 @@ function EntryContentRouteDemo(){
     "escrow":50.5
   };
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentRoute">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentRoute"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}></ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}></ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}></ui_static.Div>
         <ui_static.Div design={{"type":"dark"}} style={{"flex":1}}></ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentRouteToggleDemo [1226] 
@@ -1112,12 +1240,16 @@ function EntryContentRouteToggleDemo(){
     "escrow":50.5
   };
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentRouteToggle">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentRouteToggle"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}></ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}></ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}></ui_static.Div>
         <ui_static.Div design={{"type":"dark"}} style={{"flex":1}}></ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentActionDemo [1262] 
@@ -1129,7 +1261,11 @@ function EntryContentActionDemo(){
     "escrow":50.5
   };
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentAction">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentAction"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryContentAction\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        actions={{\n          \"print\":function (e){\n            return alert(JSON.stringify(e));\n          }\n        }}\n        impl={{\"submit\":\"print\",\"text\":\"HELLO\",\"submitType\":\"entry\"}}>\n      </slim_entry.EntryContentAction>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        actions={{\n          \"print\":function (e){\n            return alert(JSON.stringify(e));\n          }\n        }}\n        impl={{\n          \"type\":\"action\",\n          \"text\":\"HELLO\",\n          \"submit\":\"print\",\n          \"submitType\":\"entry\"\n        }}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryContentAction
@@ -1161,7 +1297,7 @@ function EntryContentActionDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryContentSubmitDemo [1298] 
@@ -1178,7 +1314,11 @@ function EntryContentSubmitDemo(){
     "description":[]
   });
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryContentSubmit">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryContentSubmit"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryContentSubmit\n        actions={{\n          \"create\":function (data){\n            return alert(JSON.stringify(data));\n          }\n        }}\n        form={form}\n        impl={{\"submit\":\"create\"}}>\n      </slim_entry.EntryContentSubmit>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        actions={{\n          \"create\":function (data){\n            return alert(JSON.stringify(data));\n          }\n        }}\n        mini={true}\n        form={form}\n        impl={{\"type\":\"submit\",\"submit\":\"create\"}}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryContentSubmit
@@ -1205,14 +1345,18 @@ function EntryContentSubmitDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryLayoutCardDemo [1333] 
 function EntryLayoutCardDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryLayoutCard">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryLayoutCard"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryLayoutCard\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        impl={{\n          \"body\":{\n            \"title\":(\n              <slim_entry.EntryContentTitle\n                design={{\"type\":\"light\"}}\n                entry={entry}\n                impl={{\"key\":\"title\",\"template\":[\"currency_id\"]}}\n                custom={{\"title\":{\"style\":{\"padding\":10}}}}>\n              </slim_entry.EntryContentTitle>)\n          }\n        }}>\n      </slim_entry.EntryLayoutCard>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        custom={{\"title\":{\"style\":{\"padding\":10}}}}\n        impl={{\n          \"type\":\"card\",\n          \"body\":{\n            \"title\":{\"type\":\"title\",\"key\":\"title\",\"template\":[\"currency_id\"]}\n          }\n        }}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryLayoutCard
@@ -1245,7 +1389,7 @@ function EntryLayoutCardDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryLayoutFormDemo [1373] 
@@ -1262,7 +1406,11 @@ function EntryLayoutFormDemo(){
     "description":[]
   });
   return (
-    <n.Enclosed label="melbourne.slim-entry/EntryLayoutForm">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/EntryLayoutForm"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.EntryLayoutForm\n        actions={{\n          \"create\":function (data){\n            return alert(JSON.stringify(data));\n          }\n        }}\n        form={form}\n        impl={{\n          \"submit\":\"create\",\n          \"body\":[\n            (\n            <slim_entry.EntryContentField\n              key={0}\n              design={{\"type\":\"light\"}}\n              form={form}\n              mini={true}\n              impl={{\"type\":\"field\",\"label\":\"Name\",\"field\":\"name\"}}>\n            </slim_entry.EntryContentField>),\n            (\n            <slim_entry.EntryContentField\n              key={1}\n              design={{\"type\":\"light\"}}\n              form={form}\n              mini={true}\n              impl={{\"type\":\"field\",\"label\":\"Title\",\"field\":\"title\"}}>\n            </slim_entry.EntryContentField>)\n          ]\n        }}>\n      </slim_entry.EntryLayoutForm>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        actions={{\n          \"create\":function (data){\n            return alert(JSON.stringify(data));\n          }\n        }}\n        mini={true}\n        form={form}\n        impl={{\n          \"type\":\"form\",\n          \"submit\":\"create\",\n          \"body\":[\n            {\"type\":\"field\",\"label\":\"Name\",\"field\":\"name\"},\n            {\"type\":\"field\",\"label\":\"Title\",\"field\":\"title\"}\n          ]\n        }}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.EntryLayoutForm
@@ -1316,14 +1464,18 @@ function EntryLayoutFormDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-entry-test/EntryDemo [1436] 
 function EntryDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
-    <n.Enclosed label="melbourne.slim-entry/Entry">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-entry/Entry"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        impl={{\"type\":\"title\",\"template\":[\"currency_id\"]}}>\n      </slim_entry.Entry>\n      <slim_entry.Entry\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        impl={{\"type\":\"p\",\"template\":[\"currency_id\"]}}>\n      </slim_entry.Entry>\n      <slim_entry.Entry design={{\"type\":\"light\"}} impl={{\"type\":\"separator\"}}></slim_entry.Entry>\n      <slim_entry.Entry\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        impl={{\n          \"type\":\"image\",\n          \"text\":{\n            \"template\":[\"currency_id\"],\n            \"format\":function (arr){\n              return arr[0];\n            }\n          }\n        }}>\n      </slim_entry.Entry>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        impl={{\n          \"type\":\"card\",\n          \"body\":{\n            \"main\":{\n              \"type\":\"v\",\n              \"body\":[\n                {\"key\":\"entry\",\"type\":\"p\",\"template\":[\"currency_id\"]},\n                {\n                \"type\":\"h\",\n                \"body\":[\n                  {\"key\":\"entry\",\"type\":\"title\",\"template\":[\"escrow\"]},\n                  {\"type\":\"p\",\"template\":[\"balance\"]}\n                ]\n              }\n              ]\n            }\n          }\n        }}>\n      </slim_entry.Entry>\n      <slim_entry.Entry\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        custom={{\n          \"row\":{\"style\":{\"padding\":5}},\n          \"entry\":{\"style\":{\"padding\":3}}\n        }}\n        impl={{\n          \"key\":\"row\",\n          \"type\":\"v\",\n          \"body\":[\n            {\n            \"type\":\"h\",\n            \"body\":[\n              {\"type\":\"p\",\"template\":[\"currency_id\"]},\n              {\"type\":\"title\",\"template\":[\"escrow\"]},\n              {\"type\":\"p\",\"template\":[\"balance\"]}\n            ]\n          },\n            {\n            \"type\":\"v\",\n            \"body\":[\n              {\"type\":\"p\",\"template\":[\"currency_id\"]},\n              {\"type\":\"title\",\"template\":[\"balance\"]}\n            ]\n          }\n          ]\n        }}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1}}>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        impl={{\"type\":\"title\",\"template\":[\"currency_id\"]}}>\n      </slim_entry.Entry>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        impl={{\"type\":\"p\",\"template\":[\"currency_id\"]}}>\n      </slim_entry.Entry>\n      <slim_entry.Entry design={{\"type\":\"dark\"}} impl={{\"type\":\"separator\"}}></slim_entry.Entry>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        impl={{\n          \"type\":\"image\",\n          \"text\":{\n            \"template\":[\"currency_id\"],\n            \"format\":function (arr){\n              return arr[0];\n            }\n          }\n        }}>\n      </slim_entry.Entry>\n      <slim_entry.Entry\n        design={{\"type\":\"light\"}}\n        entry={entry}\n        impl={{\n          \"type\":\"card\",\n          \"body\":{\n            \"main\":{\n              \"type\":\"v\",\n              \"body\":[\n                {\"key\":\"entry\",\"type\":\"p\",\"template\":[\"currency_id\"]},\n                {\n                \"type\":\"h\",\n                \"body\":[\n                  {\"key\":\"entry\",\"type\":\"title\",\"template\":[\"escrow\"]},\n                  {\"type\":\"p\",\"template\":[\"balance\"]}\n                ]\n              }\n              ]\n            }\n          }\n        }}>\n      </slim_entry.Entry>\n      <slim_entry.Entry\n        design={{\"type\":\"dark\"}}\n        entry={entry}\n        custom={{\n          \"row\":{\"style\":{\"padding\":5}},\n          \"entry\":{\"style\":{\"padding\":3}}\n        }}\n        impl={{\n          \"key\":\"row\",\n          \"type\":\"v\",\n          \"body\":[\n            {\n            \"type\":\"h\",\n            \"body\":[\n              {\"key\":\"entry\",\"type\":\"p\",\"template\":[\"currency_id\"]},\n              {\"type\":\"title\",\"template\":[\"escrow\"]},\n              {\"type\":\"p\",\"template\":[\"balance\"]}\n            ]\n          },\n            {\n            \"type\":\"v\",\n            \"body\":[\n              {\"type\":\"p\",\"template\":[\"currency_id\"]},\n              {\"type\":\"title\",\"template\":[\"balance\"]}\n            ]\n          }\n          ]\n        }}>\n      </slim_entry.Entry>\n    </ui_static.Div>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
           <slim_entry.Entry
@@ -1480,7 +1632,7 @@ function EntryDemo(){
           </slim_entry.Entry>
         </ui_static.Div>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {

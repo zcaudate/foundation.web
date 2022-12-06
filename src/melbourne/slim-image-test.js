@@ -12,7 +12,11 @@ function FormImageDemo(){
     return {"price":null};
   },{"price":[]});
   return (
-    <n.Enclosed label="melbourne.slim-image/FormImage">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-image/FormImage"
+      code={function (){
+        return "(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"flex\":1,\"padding\":10}}>\n      <slim_image.FormImage\n        brand={{\"type\":\"light\"}}\n        label=\"Picture\"\n        form={form}\n        field=\"price\">\n      </slim_image.FormImage>\n    </ReactNative.View>\n    <ReactNative.View style={{\"backgroundColor\":\"#333\",\"flex\":1,\"padding\":10}}>\n      <slim_image.FormImage\n        brand={{\"type\":\"dark\"}}\n        label=\"Picture\"\n        form={form}\n        field=\"price\">\n      </slim_image.FormImage>\n    </ReactNative.View>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ReactNative.View style={{"backgroundColor":"#eee","flex":1,"padding":10}}>
           <slim_image.FormImage
@@ -31,7 +35,7 @@ function FormImageDemo(){
           </slim_image.FormImage>
         </ReactNative.View>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {"FormImageDemo":FormImageDemo};

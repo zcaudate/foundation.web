@@ -13,7 +13,11 @@ function FormSpinnerDemo(){
   },{"price":[]});
   let [max,min,step,decimal] = [1000,0,2,2];
   return (
-    <n.Enclosed label="melbourne.slim-number/FormSpinner">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-number/FormSpinner"
+      code={function (){
+        return "(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"flex\":1,\"padding\":10}}>\n      <slim_number.FormSpinner\n        brand={{\"type\":\"light\"}}\n        label=\"Price\"\n        field=\"price\"\n        form={form}\n        step={step}\n        min={min}\n        max={max}\n        decimal={decimal}>\n      </slim_number.FormSpinner>\n    </ReactNative.View>\n    <ReactNative.View style={{\"backgroundColor\":\"#333\",\"flex\":1,\"padding\":10}}>\n      <slim_number.FormSpinner\n        brand={{\"type\":\"dark\"}}\n        label=\"Price\"\n        field=\"price\"\n        form={form}\n        step={step}\n        min={min}\n        max={max}\n        decimal={decimal}>\n      </slim_number.FormSpinner>\n    </ReactNative.View>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ReactNative.View style={{"backgroundColor":"#eee","flex":1,"padding":10}}>
           <slim_number.FormSpinner
@@ -40,7 +44,7 @@ function FormSpinnerDemo(){
           </slim_number.FormSpinner>
         </ReactNative.View>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-number-test/FormSliderDemo [53] 
@@ -50,7 +54,11 @@ function FormSliderDemo(){
   },{"price":[]});
   let [max,min,step,decimal] = [100,0,1];
   return (
-    <n.Enclosed label="melbourne.slim-number/FormSlider">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-number/FormSlider"
+      code={function (){
+        return "(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"flex\":1,\"padding\":10}}>\n      <slim_number.FormSlider\n        form={form}\n        step={step}\n        fieldProps={{\"addons\":[]}}\n        min={min}\n        field=\"price\"\n        brand={{\"type\":\"light\"}}\n        label=\"Price\"\n        length={150}\n        max={max}>\n      </slim_number.FormSlider>\n    </ReactNative.View>\n    <ReactNative.View style={{\"backgroundColor\":\"#333\",\"flex\":1,\"padding\":10}}>\n      <slim_number.FormSlider\n        length={150}\n        brand={{\"type\":\"dark\"}}\n        label=\"Price\"\n        field=\"price\"\n        form={form}\n        step={step}\n        min={min}\n        max={max}>\n      </slim_number.FormSlider>\n    </ReactNative.View>\n  </n.Row>);";
+      }()}>
       <n.Row>
         <ReactNative.View style={{"backgroundColor":"#eee","flex":1,"padding":10}}>
           <slim_number.FormSlider
@@ -78,7 +86,7 @@ function FormSliderDemo(){
           </slim_number.FormSlider>
         </ReactNative.View>
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {

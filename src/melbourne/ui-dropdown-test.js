@@ -12,7 +12,11 @@ function DropdownIndexedDemo(){
   let [index,setIndex] = React.useState(2);
   return (
     <n.Isolation>
-      <n.Enclosed label="melbourne.ui-dropdown/DropdownIndexed">
+      <n.EnclosedCodeContainer
+        label="melbourne.ui-dropdown/DropdownIndexed"
+        code={function (){
+          return "(\n  <n.TextDisplay content={n.format_entry({index})}></n.TextDisplay>);\n(\n  <n.Row>\n    <n.Row\n      style={{\n        \"backgroundColor\":\"#eee\",\n        \"flex\":1,\n        \"flexDirection\":\"row-reverese\",\n        \"padding\":30\n      }}>\n      <ui_dropdown.DropdownIndexed\n        design={{\"type\":\"light\"}}\n        items={[\"A\",\"B\",\"C\",\"D\"]}\n        active={active}\n        setActive={setActive}\n        index={index}\n        setIndex={setIndex}>\n      </ui_dropdown.DropdownIndexed>\n    </n.Row>\n    <n.Row\n      style={{\n        \"backgroundColor\":\"#333\",\n        \"flex\":1,\n        \"flexDirection\":\"row-reverese\",\n        \"padding\":30\n      }}>\n      <ui_dropdown.DropdownIndexed\n        design={{\"type\":\"dark\"}}\n        items={[\"A\",\"B\",\"C\",\"D\"]}\n        active={active}\n        setActive={setActive}\n        index={index}\n        setIndex={setIndex}>\n      </ui_dropdown.DropdownIndexed>\n    </n.Row>\n  </n.Row>);";
+        }()}>
         <n.TextDisplay content={n.format_entry({index})}></n.TextDisplay>
         <n.Row>
           <n.Row
@@ -48,7 +52,7 @@ function DropdownIndexedDemo(){
             </ui_dropdown.DropdownIndexed>
           </n.Row>
         </n.Row>
-      </n.Enclosed>
+      </n.EnclosedCodeContainer>
     </n.Isolation>);
 }
 
@@ -59,7 +63,11 @@ function DropdownDemo(){
   let [display,setDisplay] = React.useState("screen");
   return (
     <n.Isolation>
-      <n.Enclosed label="melbourne.ui-dropdown/Dropdown">
+      <n.EnclosedCodeContainer
+        label="melbourne.ui-dropdown/Dropdown"
+        code={function (){
+          return "(\n  <n.Tabs\n    data={[\"screen\",\"dropdown\"]}\n    value={display}\n    setValue={setDisplay}>\n  </n.Tabs>);\n(\n  <n.TextDisplay content={n.format_entry({value})}></n.TextDisplay>);\n(\n  <n.Row>\n    <n.Row\n      style={{\n        \"backgroundColor\":\"#eee\",\n        \"flex\":1,\n        \"flexDirection\":\"row-reverese\",\n        \"padding\":30\n      }}>\n      <ui_dropdown.Dropdown\n        design={{\"type\":\"light\"}}\n        displayType={display}\n        data={[\"A\",\"B\",\"C\",\"D\"]}\n        active={active}\n        setActive={setActive}\n        value={value}\n        setValue={setValue}>\n      </ui_dropdown.Dropdown>\n    </n.Row>\n    <n.Row\n      style={{\n        \"backgroundColor\":\"#333\",\n        \"flex\":1,\n        \"flexDirection\":\"row-reverese\",\n        \"padding\":30\n      }}>\n      <ui_dropdown.Dropdown\n        design={{\"type\":\"dark\"}}\n        displayType={display}\n        data={[\"A\",\"B\",\"C\",\"D\"]}\n        active={active}\n        setActive={setActive}\n        value={value}\n        setValue={setValue}>\n      </ui_dropdown.Dropdown>\n    </n.Row>\n  </n.Row>);";
+        }()}>
         <n.Tabs
           data={["screen","dropdown"]}
           value={display}
@@ -102,7 +110,7 @@ function DropdownDemo(){
             </ui_dropdown.Dropdown>
           </n.Row>
         </n.Row>
-      </n.Enclosed>
+      </n.EnclosedCodeContainer>
     </n.Isolation>);
 }
 

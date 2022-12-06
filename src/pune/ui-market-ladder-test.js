@@ -42,32 +42,43 @@ var CHART = {
 // pune.ui-market-ladder-test/MarketLadderTextDemo [31] 
 function MarketLadderTextDemo(){
   return (
-    <n.Enclosed
+    <n.EnclosedCodeContainer
       label="pune.ui-market-ladder/MarketLadderText"
-      style={{"height":150}}>{React.createElement(market_ladder.MarketLadderText,CHART)}
-    </n.Enclosed>);
+      style={{"height":150}}
+      code={function (){
+        return "React.createElement(market_ladder.MarketLadderText,CHART);";
+      }()}>{React.createElement(market_ladder.MarketLadderText,CHART)}
+    </n.EnclosedCodeContainer>);
 }
 
 // pune.ui-market-ladder-test/MarketLadderRowDemo [43] 
 function MarketLadderRowDemo(){
   return (
-    <n.Enclosed label="pune.ui-market-ladder/MarketLadderRow">
+    <n.EnclosedCodeContainer
+      label="pune.ui-market-ladder/MarketLadderRow"
+      code={function (){
+        return "React.createElement(market_ladder.MarketLadderRow,{\n  \"amount\":60,\n  \"rate\":66,\n  \"design\":{\"type\":\"light\",\"color\":\"blue\"},\n  \"control\":{\"decimal\":2,\"fraction\":0.01,\"prediction\":\"yes\"}\n});";
+      }()}>
       {React.createElement(market_ladder.MarketLadderRow,{
         "amount":60,
         "rate":66,
         "design":{"type":"light","color":"blue"},
         "control":{"decimal":2,"fraction":0.01,"prediction":"yes"}
       })}
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // pune.ui-market-ladder-test/MarketLadderDemo [62] 
 function MarketLadderDemo(){
   return (
-    <n.Enclosed label="pune.ui-market-ladder/MarketLadder">
+    <n.EnclosedCodeContainer
+      label="pune.ui-market-ladder/MarketLadder"
+      code={function (){
+        return "(\n  <n.Row>{React.createElement(market_ladder.MarketLadder,CHART)}</n.Row>);\n(\n  <ReactNative.View style={{\"height\":330}}>{React.createElement(n.TextDisplay,CHART)}</ReactNative.View>);";
+      }()}>
       <n.Row>{React.createElement(market_ladder.MarketLadder,CHART)}</n.Row>
       <ReactNative.View style={{"height":330}}>{React.createElement(n.TextDisplay,CHART)}</ReactNative.View>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {

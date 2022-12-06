@@ -82,7 +82,32 @@ function Enclosed({label,styleLabel,children,style,...rprops}){
     </ReactNative.View>);
 }
 
-// js.react-native/Row [540] 
+// js.react-native/EnclosedCodeContainer [540] 
+function EnclosedCodeContainer({code,label,children}){
+  let [showCode,setShowCode] = React.useState();
+  return (
+    <Enclosed label={label}>
+      <ReactNative.View
+        style={{
+          "position":"absolute",
+          "right":-10,
+          "top":-20,
+          "transform":[{"scale":0.6}],
+          "zIndex":10
+        }}>
+        <ReactNative.Button
+          title={showCode ? "DEMO" : "CODE"}
+          onPress={function (){
+            setShowCode(!showCode);
+          }}>
+        </ReactNative.Button>
+      </ReactNative.View>
+      {showCode ? (
+        <ReactNative.Text>{code}</ReactNative.Text>) : children}
+    </Enclosed>);
+}
+
+// js.react-native/Row [571] 
 function Row({refLink,style,...rprops}){
   return React.createElement(ReactNative.View,Object.assign({
     "ref":refLink,
@@ -93,7 +118,7 @@ function Row({refLink,style,...rprops}){
   },rprops));
 }
 
-// js.react-native/Fill [553] 
+// js.react-native/Fill [584] 
 function Fill({style,...rprops}){
   return (
     <ReactNative.View
@@ -105,7 +130,7 @@ function Fill({style,...rprops}){
     </ReactNative.View>);
 }
 
-// js.react-native/H1 [564] 
+// js.react-native/H1 [595] 
 function H1({text,style,...rprops}){
   return (
     <ReactNative.Text
@@ -123,7 +148,7 @@ function H1({text,style,...rprops}){
     </ReactNative.Text>);
 }
 
-// js.react-native/H2 [580] 
+// js.react-native/H2 [611] 
 function H2({text,style,...rprops}){
   return (
     <ReactNative.Text
@@ -141,7 +166,7 @@ function H2({text,style,...rprops}){
     </ReactNative.Text>);
 }
 
-// js.react-native/H3 [596] 
+// js.react-native/H3 [627] 
 function H3({text,style,...rprops}){
   return (
     <ReactNative.Text
@@ -153,7 +178,7 @@ function H3({text,style,...rprops}){
     </ReactNative.Text>);
 }
 
-// js.react-native/H4 [610] 
+// js.react-native/H4 [641] 
 function H4({text,style,...rprops}){
   return (
     <ReactNative.Text
@@ -165,7 +190,7 @@ function H4({text,style,...rprops}){
     </ReactNative.Text>);
 }
 
-// js.react-native/H5 [624] 
+// js.react-native/H5 [655] 
 function H5({text,style,...rprops}){
   return (
     <ReactNative.Text
@@ -177,7 +202,7 @@ function H5({text,style,...rprops}){
     </ReactNative.Text>);
 }
 
-// js.react-native/Caption [637] 
+// js.react-native/Caption [668] 
 function Caption({text,styleText,textProps,style,...rprops}){
   return (
     <ReactNative.View
@@ -200,7 +225,7 @@ function Caption({text,styleText,textProps,style,...rprops}){
     </ReactNative.View>);
 }
 
-// js.react-native/useTree [664] 
+// js.react-native/useTree [695] 
 function useTree({branchesFn,displayFn,formatFn,initial,parents,root,setInitial,targetFn,tree}){
   formatFn = (formatFn || format_entry);
   displayFn = (displayFn || function (target,_branch,_parents,_root){
@@ -212,7 +237,7 @@ function useTree({branchesFn,displayFn,formatFn,initial,parents,root,setInitial,
   );
 }
 
-// js.react-native/TabsIndexed [692] 
+// js.react-native/TabsIndexed [723] 
 function TabsIndexed({
   items,
   onChange,
@@ -264,14 +289,14 @@ function TabsIndexed({
     </ReactNative.View>);
 }
 
-// js.react-native/Tabs [736] 
+// js.react-native/Tabs [767] 
 function Tabs({data,valueFn,value,setValue,...rprops}){
   let {index,items,setIndex} = r.convertIndex({data,setValue,value,valueFn});
   return (
     <TabsIndexed setIndex={setIndex} items={items} index={index} {...rprops}></TabsIndexed>);
 }
 
-// js.react-native/TabsPane [756] 
+// js.react-native/TabsPane [787] 
 function TabsPane({
   listWidth,
   tabsFormat,
@@ -310,7 +335,7 @@ function TabsPane({
     </ReactNative.View>);
 }
 
-// js.react-native/ListIndexed [807] 
+// js.react-native/ListIndexed [838] 
 function ListIndexed({
   items,
   onChange,
@@ -363,14 +388,14 @@ function ListIndexed({
     </ReactNative.FlatList>);
 }
 
-// js.react-native/List [851] 
+// js.react-native/List [882] 
 function List({data,valueFn,value,setValue,...rprops}){
   let {index,items,setIndex} = r.convertIndex({data,setValue,value,valueFn});
   return (
     <ListIndexed setIndex={setIndex} items={items} index={index} {...rprops}></ListIndexed>);
 }
 
-// js.react-native/ListPane [871] 
+// js.react-native/ListPane [902] 
 function ListPane({
   listWidth,
   listFormat,
@@ -414,7 +439,7 @@ function ListPane({
     </ReactNative.View>);
 }
 
-// js.react-native/TabsMultiIndexed [931] 
+// js.react-native/TabsMultiIndexed [962] 
 function TabsMultiIndexed({
   items,
   setIndices,
@@ -459,7 +484,7 @@ function TabsMultiIndexed({
     <ReactNative.View style={{"flexDirection":"row","flexWrap":"wrap"}}>{items.map(itemFn)}</ReactNative.View>);
 }
 
-// js.react-native/TabsMulti [973] 
+// js.react-native/TabsMulti [1004] 
 function TabsMulti({data,valueFn,values,setValues,...rprops}){
   let {indices,items,setIndices} = r.convertIndices({data,setValues,valueFn,values});
   return (
@@ -471,7 +496,7 @@ function TabsMulti({data,valueFn,values,setValues,...rprops}){
     </TabsMultiIndexed>);
 }
 
-// js.react-native/TreePane [1011] 
+// js.react-native/TreePane [1042] 
 function TreePane({tree,root = tree,parents = [],levels}){
   if(k.is_emptyp(levels)){
     return (
@@ -506,7 +531,7 @@ function TreePane({tree,root = tree,parents = [],levels}){
     </Pane>);
 }
 
-// js.react-native/displayTarget [1045] 
+// js.react-native/displayTarget [1076] 
 function displayTarget(Target){
   if(null == Target){
     return (
@@ -518,7 +543,7 @@ function displayTarget(Target){
   }
 }
 
-// js.react-native/BaseIndicator [1057] 
+// js.react-native/BaseIndicator [1088] 
 function BaseIndicator({cardStyle,color,content,label,onPress,styleText,waiting}){
   return (
     <ReactNative.TouchableOpacity onPress={onPress} disabled={waiting}>
@@ -555,7 +580,7 @@ function BaseIndicator({cardStyle,color,content,label,onPress,styleText,waiting}
     </ReactNative.TouchableOpacity>);
 }
 
-// js.react-native/ToggleIndicator [1098] 
+// js.react-native/ToggleIndicator [1129] 
 function ToggleIndicator({active,label,onPress,waiting}){
   return (
     <BaseIndicator
@@ -567,7 +592,7 @@ function ToggleIndicator({active,label,onPress,waiting}){
     </BaseIndicator>);
 }
 
-// js.react-native/RecordList [1118] 
+// js.react-native/RecordList [1149] 
 function RecordList({columns,entry}){
   return (
     <>
@@ -585,7 +610,7 @@ function RecordList({columns,entry}){
     </>);
 }
 
-// js.react-native/TextDisplay [1147] 
+// js.react-native/TextDisplay [1178] 
 function TextDisplay({content,style,styleText,...rprops}){
   let text = content || format_entry(rprops);
   let clipboard = globalThis["navigator"] && globalThis["navigator"].clipboard;
@@ -624,25 +649,25 @@ function TextDisplay({content,style,styleText,...rprops}){
     </>);
 }
 
-// js.react-native/defaultGlobal [1189] 
+// js.react-native/defaultGlobal [1220] 
 function defaultGlobal(){
   return {"isDev":true,"isTransition":false};
 }
 
-// js.react-native/Global [1197] 
+// js.react-native/Global [1228] 
 globalThis["js_react_native$$Global"] = React.createContext(defaultGlobal());
 
-// js.react-native/GlobalProvider [1200] 
+// js.react-native/GlobalProvider [1231] 
 function GlobalProvider({children,value}){
   let {Provider} = globalThis["js_react_native$$Global"];
   return (
     <Provider value={Object.assign(defaultGlobal(),value)}>{children}</Provider>);
 }
 
-// js.react-native/PortalRegistery [1216] 
+// js.react-native/PortalRegistery [1247] 
 globalThis["js_react_native$$PortalRegistery"] = React.createContext(helper_portal.newRegistry());
 
-// js.react-native/PortalProvider [1219] 
+// js.react-native/PortalProvider [1250] 
 function PortalProvider({children,registry}){
   let {Provider} = globalThis["js_react_native$$PortalRegistery"];
   let value = React.useCallback(registry || helper_portal.newRegistry(),[]);
@@ -650,7 +675,7 @@ function PortalProvider({children,registry}){
     <Provider value={value}>{children}</Provider>);
 }
 
-// js.react-native/PortalSinkImpl [1232] 
+// js.react-native/PortalSinkImpl [1263] 
 function PortalSinkImpl({name,registry,children,onSource,...rprops}){
   let [source,setSource] = React.useState();
   let sinkRef = React.useRef();
@@ -669,7 +694,7 @@ function PortalSinkImpl({name,registry,children,onSource,...rprops}){
     <ReactNative.View ref={sinkRef} {...rprops}>{children}{source}</ReactNative.View>);
 }
 
-// js.react-native/PortalSink [1257] 
+// js.react-native/PortalSink [1288] 
 function PortalSink({name = "default",children,...rprops}){
   let {Consumer} = globalThis["js_react_native$$PortalRegistery"];
   return (
@@ -680,13 +705,13 @@ function PortalSink({name = "default",children,...rprops}){
     </Consumer>);
 }
 
-// js.react-native/Isolation [1270] 
+// js.react-native/Isolation [1301] 
 function Isolation(props){
   return (
     <PortalProvider><PortalSink {...props}></PortalSink></PortalProvider>);
 }
 
-// js.react-native/PortalImpl [1279] 
+// js.react-native/PortalImpl [1310] 
 function PortalImpl({
   target,
   registry,
@@ -710,7 +735,7 @@ function PortalImpl({
     <ReactNative.View></ReactNative.View>);
 }
 
-// js.react-native/Portal [1299] 
+// js.react-native/Portal [1330] 
 function Portal({target = "default",...rprops}){
   let {Consumer} = globalThis["js_react_native$$PortalRegistery"];
   return (
@@ -722,7 +747,7 @@ function Portal({target = "default",...rprops}){
     </Consumer>);
 }
 
-// js.react-native/usePortalLayouts [1312] 
+// js.react-native/usePortalLayouts [1343] 
 function usePortalLayouts(hostRef,setLayouts){
   let [sinkRef,setSinkRef] = React.useState();
   let contentRef = React.useRef();
@@ -756,6 +781,7 @@ var MODULE = {
   "measure":measure,
   "measureRef":measureRef,
   "Enclosed":Enclosed,
+  "EnclosedCodeContainer":EnclosedCodeContainer,
   "Row":Row,
   "Fill":Fill,
   "H1":H1,

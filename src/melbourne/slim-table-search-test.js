@@ -99,7 +99,11 @@ function TableListSearchDemo(){
   },[example]);
   return (
     <n.Isolation>
-      <n.Enclosed label="melbourne.slim-table-search/TableListSearch">
+      <n.EnclosedCodeContainer
+        label="melbourne.slim-table-search/TableListSearch"
+        code={function (){
+          return "(\n  <ui_input.Input\n    design={{\"type\":\"light\"}}\n    value={example}\n    onChangeText={setExample}>\n  </ui_input.Input>);\n(\n  <n.Row style={{\"height\":400}}>\n    <ReactNative.ScrollView>\n      <slim_table_list.TableList\n        mini={true}\n        design={{\"type\":\"light\"}}\n        style={{\"minWidth\":200}}\n        display={{\"brief\":{\"card\":{\"component\":\"mini\"}},\"list\":{}}}\n        views={views}\n        components={components}\n        control={control}>\n      </slim_table_list.TableList>\n    </ReactNative.ScrollView>\n  </n.Row>);";
+        }()}>
         <ui_input.Input
           design={{"type":"light"}}
           value={example}
@@ -118,7 +122,7 @@ function TableListSearchDemo(){
             </slim_table_list.TableList>
           </ReactNative.ScrollView>
         </n.Row>
-      </n.Enclosed>
+      </n.EnclosedCodeContainer>
     </n.Isolation>);
 }
 

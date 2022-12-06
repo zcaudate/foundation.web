@@ -5054,7 +5054,11 @@ function SelectSingleDemo(){
   });
   let [selected,setSelected] = React.useState();
   return (
-    <n.Enclosed label="melbourne.ui-autocomplete/SelectSingle">
+    <n.EnclosedCodeContainer
+      label="melbourne.ui-autocomplete/SelectSingle"
+      code={function (){
+        return "(\n  <n.Isolation>\n    <ui_autocomplete.SelectSingle\n      source={{\"key_fn\":k.id_fn,\"val_fn\":k.identity,\"view\":view}}\n      selected={selected}\n      setSelected={setSelected}>\n    </ui_autocomplete.SelectSingle>\n  </n.Isolation>);";
+      }()}>
       <n.Isolation>
         <ui_autocomplete.SelectSingle
           source={{"key_fn":k.id_fn,"val_fn":k.identity,"view":view}}
@@ -5062,7 +5066,7 @@ function SelectSingleDemo(){
           setSelected={setSelected}>
         </ui_autocomplete.SelectSingle>
       </n.Isolation>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {

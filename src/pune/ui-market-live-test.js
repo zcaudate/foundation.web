@@ -1199,15 +1199,23 @@ var CHART_ROW = {
 // pune.ui-market-live-test/MarketLiveRowDemo [42] 
 function MarketLiveRowDemo(){
   return (
-    <n.Enclosed label="pune.ui-market-live/MarketLiveRow">
+    <n.EnclosedCodeContainer
+      label="pune.ui-market-live/MarketLiveRow"
+      code={function (){
+        return "(\n  <n.Row>{React.createElement(market_live.MarketLiveRow,CHART_ROW)}</n.Row>);";
+      }()}>
       <n.Row>{React.createElement(market_live.MarketLiveRow,CHART_ROW)}</n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // pune.ui-market-live-test/MarketLiveDemo [54] 
 function MarketLiveDemo(){
   return (
-    <n.Enclosed label="pune.ui-market-live/MarketLive">
+    <n.EnclosedCodeContainer
+      label="pune.ui-market-live/MarketLive"
+      code={function (){
+        return "(\n  <n.Row style={{\"height\":350}}>\n    {React.createElement(market_live.MarketLive,Object.assign({\n      \"orderFn\":function (orderId,orderLookup){\n        return new Promise(function (resolve,reject){\n          setTimeout(function (){\n            try{\n              resolve(        (function (){\n                        return orderLookup[orderId];\n                      })());\n            }\n            catch(e){\n              reject(e);\n            }\n          },200);\n        }).then(function (data){\n          alert(JSON.stringify(data));\n        });\n      }\n    },CHART))}\n  </n.Row>);\n(\n  <n.Row style={{\"height\":400}}>{React.createElement(n.TextDisplay,CHART)}</n.Row>);";
+      }()}>
       <n.Row style={{"height":350}}>
         {React.createElement(market_live.MarketLive,Object.assign({
           "orderFn":function (orderId,orderLookup){
@@ -1229,7 +1237,7 @@ function MarketLiveDemo(){
         },CHART))}
       </n.Row>
       <n.Row style={{"height":400}}>{React.createElement(n.TextDisplay,CHART)}</n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {

@@ -38,7 +38,11 @@ function UseSubmitDemo(){
   });
   let {onAction,setWaiting,waiting} = r.useSubmit({onSubmit,setResult});
   return (
-    <n.Enclosed label="melbourne.slim-submit/useSubmit">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-submit/useSubmit"
+      code={function (){
+        return "(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"padding\":10,\"flex\":1}}>\n      <n.Row>\n        <ReactNative.Button title=\"Action\" onPress={onAction}></ReactNative.Button>\n        <ReactNative.Text> </ReactNative.Text>\n        <ReactNative.Button\n          title=\"Clear\"\n          onPress={function (){\n            return setResult(null);\n          }}>\n        </ReactNative.Button>\n        <ReactNative.Text> </ReactNative.Text>\n      </n.Row>\n    </ReactNative.View>\n  </n.Row>);\n(\n  <n.TextDisplay content={n.format_entry({result,waiting})}></n.TextDisplay>);";
+      }()}>
       <n.Row>
         <ReactNative.View style={{"backgroundColor":"#eee","padding":10,"flex":1}}>
           <n.Row>
@@ -55,7 +59,7 @@ function UseSubmitDemo(){
         </ReactNative.View>
       </n.Row>
       <n.TextDisplay content={n.format_entry({result,waiting})}></n.TextDisplay>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-submit-test/SubmitButtonDemo [61] 
@@ -63,7 +67,11 @@ function SubmitButtonDemo(){
   let [errored,setErrored] = React.useState(true);
   return (
     <n.Isolation>
-      <n.Enclosed label="melbourne.slim-submit/SubmitButton">
+      <n.EnclosedCodeContainer
+        label="melbourne.slim-submit/SubmitButton"
+        code={function (){
+          return "(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"padding\":10}}>\n      <slim_submit.SubmitButton design={{\"type\":\"light\"}} text=\"HELLO\"></slim_submit.SubmitButton>\n      <ReactNative.View style={{\"height\":10}}></ReactNative.View>\n      <slim_submit.SubmitButton design={{\"type\":\"light\"}} waiting={true} text=\"HELLO\"></slim_submit.SubmitButton>\n      <ReactNative.View style={{\"height\":10}}></ReactNative.View>\n      <slim_submit.SubmitButton\n        design={{\"type\":\"light\"}}\n        style={{\"width\":150,\"textAlign\":\"center\"}}\n        text=\"CHANGE PASSWORD\"\n        errored={errored}\n        onPress={function (){\n          return setErrored(!errored);\n        }}>\n      </slim_submit.SubmitButton>\n    </ReactNative.View>\n    <ReactNative.View style={{\"backgroundColor\":\"#333\",\"padding\":10}}>\n      <slim_submit.SubmitButton design={{\"type\":\"dark\"}} text=\"HELLO\"></slim_submit.SubmitButton>\n      <ReactNative.View style={{\"height\":10}}></ReactNative.View>\n      <slim_submit.SubmitButton\n        design={{\"type\":\"dark\"}}\n        style={{\"width\":150}}\n        waiting={true}\n        text=\"HELLO\">\n      </slim_submit.SubmitButton>\n      <ReactNative.View style={{\"height\":10}}></ReactNative.View>\n      <slim_submit.SubmitButton\n        design={{\"type\":\"dark\"}}\n        style={{\"width\":150}}\n        errored={errored}\n        text=\"CHANGE PASSWORD\"\n        onPress={function (){\n          return setErrored(!errored);\n        }}>\n      </slim_submit.SubmitButton>\n    </ReactNative.View>\n  </n.Row>);";
+        }()}>
         <n.Row>
           <ReactNative.View style={{"backgroundColor":"#eee","padding":10}}>
             <slim_submit.SubmitButton design={{"type":"light"}} text="HELLO"></slim_submit.SubmitButton>
@@ -101,7 +109,7 @@ function SubmitButtonDemo(){
             </slim_submit.SubmitButton>
           </ReactNative.View>
         </n.Row>
-      </n.Enclosed>
+      </n.EnclosedCodeContainer>
     </n.Isolation>);
 }
 
@@ -110,7 +118,11 @@ function SubmitLineDemo(){
   let [errored,setErrored] = React.useState(true);
   return (
     <n.Isolation>
-      <n.Enclosed label="melbourne.slim-submit/SubmitLine">
+      <n.EnclosedCodeContainer
+        label="melbourne.slim-submit/SubmitLine"
+        code={function (){
+          return "(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"padding\":10}}>\n      <slim_submit.SubmitLine\n        design={{\"type\":\"light\"}}\n        errored={errored}\n        onActionPress={function (){\n          return setErrored(!errored);\n        }}\n        onActionReset={function (){\n          return setErrored(false);\n        }}>\n      </slim_submit.SubmitLine>\n    </ReactNative.View>\n  </n.Row>);";
+        }()}>
         <n.Row>
           <ReactNative.View style={{"backgroundColor":"#eee","padding":10}}>
             <slim_submit.SubmitLine
@@ -125,7 +137,7 @@ function SubmitLineDemo(){
             </slim_submit.SubmitLine>
           </ReactNative.View>
         </n.Row>
-      </n.Enclosed>
+      </n.EnclosedCodeContainer>
     </n.Isolation>);
 }
 
@@ -134,7 +146,11 @@ function SubmitLineActionsDemo(){
   let [errored,setErrored] = React.useState();
   return (
     <n.Isolation>
-      <n.Enclosed label="melbourne.slim-submit/SubmitLineActions">
+      <n.EnclosedCodeContainer
+        label="melbourne.slim-submit/SubmitLineActions"
+        code={function (){
+          return "(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"padding\":10}}>\n      <slim_submit.SubmitLineActions\n        design={{\"type\":\"light\"}}\n        errored={errored}\n        clearShow={true}\n        cancelShow={true}\n        onActionPress={function (){\n          return setErrored(!errored);\n        }}\n        onActionReset={function (){\n          return setErrored(false);\n        }}>\n      </slim_submit.SubmitLineActions>\n    </ReactNative.View>\n  </n.Row>);";
+        }()}>
         <n.Row>
           <ReactNative.View style={{"backgroundColor":"#eee","padding":10}}>
             <slim_submit.SubmitLineActions
@@ -151,7 +167,7 @@ function SubmitLineActionsDemo(){
             </slim_submit.SubmitLineActions>
           </ReactNative.View>
         </n.Row>
-      </n.Enclosed>
+      </n.EnclosedCodeContainer>
     </n.Isolation>);
 }
 
@@ -180,7 +196,11 @@ function UseSubmitFieldDemo(){
     },"explicit":false});
   return (
     <n.Isolation>
-      <n.Enclosed label="melbourne.slim-submit/useSubmitField">
+      <n.EnclosedCodeContainer
+        label="melbourne.slim-submit/useSubmitField"
+        code={function (){
+          return "(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"padding\":10}}>\n      <ReactNative.TextInput\n        value={event_form.get_field(form,\"email\")}\n        onChangeText={function (val){\n          event_form.set_field(form,\"email\",val);\n          event_form.validate_all(form);\n        }}>\n      </ReactNative.TextInput>\n      <ReactNative.View style={{\"height\":10}}></ReactNative.View>\n      <slim_submit.SubmitLine\n        design={{\"type\":\"light\"}}\n        errorProps={{\"row\":true}}\n        {...submitProps}>\n      </slim_submit.SubmitLine>\n    </ReactNative.View>\n    <ReactNative.View style={{\"backgroundColor\":\"#333\",\"padding\":10}}>\n      <ReactNative.View style={{\"height\":10}}></ReactNative.View>\n      <slim_submit.SubmitLine\n        design={{\"type\":\"dark\"}}\n        errorProps={{\"row\":true}}\n        {...submitProps}>\n      </slim_submit.SubmitLine>\n    </ReactNative.View>\n  </n.Row>);\n(\n  <n.TextDisplay content={n.format_entry({submitProps,validation})}></n.TextDisplay>);";
+        }()}>
         <n.Row>
           <ReactNative.View style={{"backgroundColor":"#eee","padding":10}}>
             <ReactNative.TextInput
@@ -207,7 +227,7 @@ function UseSubmitFieldDemo(){
           </ReactNative.View>
         </n.Row>
         <n.TextDisplay content={n.format_entry({submitProps,validation})}></n.TextDisplay>
-      </n.Enclosed>
+      </n.EnclosedCodeContainer>
     </n.Isolation>);
 }
 
@@ -236,7 +256,11 @@ function UseSubmitFormDemo(){
     },"explicit":false});
   return (
     <n.Isolation>
-      <n.Enclosed label="melbourne.slim-submit/useSubmitForm">
+      <n.EnclosedCodeContainer
+        label="melbourne.slim-submit/useSubmitForm"
+        code={function (){
+          return "(\n  <n.Row>\n    <ReactNative.View style={{\"backgroundColor\":\"#eee\",\"padding\":10}}>\n      <ReactNative.TextInput\n        value={event_form.get_field(form,\"email\")}\n        onChangeText={function (val){\n          event_form.set_field(form,\"email\",val);\n          event_form.validate_all(form);\n        }}>\n      </ReactNative.TextInput>\n      <ReactNative.View style={{\"height\":10}}></ReactNative.View>\n      <slim_submit.SubmitLine\n        onActionPress={onActionPress}\n        setResult={setResult}\n        onActionReset={onActionReset}\n        setWaiting={setWaiting}\n        onActionCheck={onActionCheck}\n        errorProps={{\"row\":true}}\n        onAction={onAction}\n        waiting={waiting}\n        design={{\"type\":\"light\"}}\n        result={result}\n        errored={errored}>\n      </slim_submit.SubmitLine>\n    </ReactNative.View>\n  </n.Row>);\n(\n  <n.TextDisplay\n    content={n.format_entry({errored,result,validation,waiting})}>\n  </n.TextDisplay>);";
+        }()}>
         <n.Row>
           <ReactNative.View style={{"backgroundColor":"#eee","padding":10}}>
             <ReactNative.TextInput
@@ -265,7 +289,7 @@ function UseSubmitFormDemo(){
         <n.TextDisplay
           content={n.format_entry({errored,result,validation,waiting})}>
         </n.TextDisplay>
-      </n.Enclosed>
+      </n.EnclosedCodeContainer>
     </n.Isolation>);
 }
 

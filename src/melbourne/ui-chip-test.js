@@ -13,7 +13,11 @@ import ui_chip from './ui-chip'
 // melbourne.ui-chip-test/ChipDemo [23] 
 function ChipDemo(){
   return (
-    <n.Enclosed label="melbourne.ui-chip/Chip">
+    <n.EnclosedCodeContainer
+      label="melbourne.ui-chip/Chip"
+      code={function (){
+        return "(\n  <n.Row>\n    <ui_chip.Chip\n      text=\"hello\"\n      onClose={function (){\n        return null;\n      }}>\n    </ui_chip.Chip>\n    <ui_chip.Chip text=\"world\" variant={{\"bg\":{\"key\":\"neutral\"}}}></ui_chip.Chip>\n  </n.Row>);\n(\n  <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flexDirection\":\"row\"}}>\n    <ui_chip.Chip\n      design={{\"type\":\"dark\"}}\n      text=\"hello\"\n      onClose={function (){\n        return null;\n      }}>\n    </ui_chip.Chip>\n    <ui_chip.Chip\n      design={{\"type\":\"dark\"}}\n      variant={{\"bg\":{\"key\":\"neutral\"}}}\n      text=\"world\">\n    </ui_chip.Chip>\n  </ui_static.Div>);";
+      }()}>
       <n.Row>
         <ui_chip.Chip
           text="hello"
@@ -37,7 +41,7 @@ function ChipDemo(){
           text="world">
         </ui_chip.Chip>
       </ui_static.Div>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {"ChipDemo":ChipDemo};

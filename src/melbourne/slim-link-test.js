@@ -46,9 +46,12 @@ function FormLinkDropdownDemo(){
   },[]);
   return (
     <n.Isolation>
-      <n.Enclosed
+      <n.EnclosedCodeContainer
         label="melbourne.slim-link/FormLinkDropdown"
-        style={{"height":200}}>
+        style={{"height":200}}
+        code={function (){
+          return "(\n  <n.Row>\n    {React.createElement(slim_link.FormLinkDropdown,Object.assign({form,views},{\n      \"design\":{\"type\":\"light\"},\n      \"label\":\"Account\",\n      \"field\":\"account_id\",\n      \"fieldProps\":{\n        \"style\":{\"width\":500},\n        \"viewKey\":\"account\",\n        \"viewTemplate\":[\"name\"]\n      }\n    }))}\n  </n.Row>);";
+        }()}>
         <n.Row>
           {React.createElement(slim_link.FormLinkDropdown,Object.assign({form,views},{
             "design":{"type":"light"},
@@ -61,7 +64,7 @@ function FormLinkDropdownDemo(){
             }
           }))}
         </n.Row>
-      </n.Enclosed>
+      </n.EnclosedCodeContainer>
     </n.Isolation>);
 }
 
@@ -95,7 +98,11 @@ function FormLinkReadOnlyDemo(){
   },[]);
   let entry = {"account_id":"id-3"};
   return (
-    <n.Enclosed label="melbourne.slim-link/FormLinkReadOnly">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-link/FormLinkReadOnly"
+      code={function (){
+        return "(\n  <n.Row>\n    {React.createElement(slim_link.FormLinkReadOnly,Object.assign({entry,form,views},{\n      \"design\":{\"type\":\"light\"},\n      \"label\":\"Account\",\n      \"field\":\"account_id\",\n      \"fieldProps\":{\n        \"style\":{\"width\":500},\n        \"viewKey\":\"account\",\n        \"viewTemplate\":[\"name\"]\n      }\n    }))}\n  </n.Row>);";
+      }()}>
       <n.Row>
         {React.createElement(slim_link.FormLinkReadOnly,Object.assign({entry,form,views},{
           "design":{"type":"light"},
@@ -108,7 +115,7 @@ function FormLinkReadOnlyDemo(){
           }
         }))}
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 // melbourne.slim-link-test/FormLinkEntryReadOnlyDemo [106] 
@@ -141,7 +148,11 @@ function FormLinkEntryReadOnlyDemo(){
   },[]);
   let entry = {"account_id":"id-2"};
   return (
-    <n.Enclosed label="melbourne.slim-link/FormLinkEntryReadOnly">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-link/FormLinkEntryReadOnly"
+      code={function (){
+        return "(\n  <n.Row>\n    {React.createElement(slim_link.FormLinkEntryReadOnly,Object.assign({entry,form,views},{\n      \"design\":{\"type\":\"light\"},\n      \"label\":\"Account\",\n      \"field\":\"account_id\",\n      \"fieldProps\":{\n        \"style\":{\"width\":500},\n        \"viewKey\":\"account\",\n        \"viewTemplate\":[\"name\"]\n      }\n    }))}\n  </n.Row>);";
+      }()}>
       <n.Row>
         {React.createElement(slim_link.FormLinkEntryReadOnly,Object.assign({entry,form,views},{
           "design":{"type":"light"},
@@ -154,7 +165,7 @@ function FormLinkEntryReadOnlyDemo(){
           }
         }))}
       </n.Row>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {

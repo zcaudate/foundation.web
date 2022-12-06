@@ -12,7 +12,11 @@ function DialogDemo(){
   let [visible,setVisible] = React.useState();
   let buttonRef = React.useRef();
   return (
-    <n.Enclosed label="melbourne.slim-dialog/Dialog">
+    <n.EnclosedCodeContainer
+      label="melbourne.slim-dialog/Dialog"
+      code={function (){
+        return "(\n  <n.Row style={{\"marginTop\":30}}>\n    <ReactNative.Button\n      ref={buttonRef}\n      title=\"ON\"\n      onPress={function (){\n        return setVisible(true);\n      }}>\n    </ReactNative.Button>\n  </n.Row>);\n(\n  <slim_dialog.Dialog\n    design={{\"type\":\"light\"}}\n    title=\"Confirm Delete\"\n    body={(\n      <>Are you sure you wish to delete?</>)}\n    modalProps={{}}\n    onSubmit={function (){\n      return setVisible(false);\n    }}\n    onCancel={function (){\n      return setVisible(false);\n    }}\n    visible={visible}>\n  </slim_dialog.Dialog>);";
+      }()}>
       <n.Row style={{"marginTop":30}}>
         <ReactNative.Button
           ref={buttonRef}
@@ -36,7 +40,7 @@ function DialogDemo(){
         }}
         visible={visible}>
       </slim_dialog.Dialog>
-    </n.Enclosed>);
+    </n.EnclosedCodeContainer>);
 }
 
 var MODULE = {"DialogDemo":DialogDemo};
